@@ -1,0 +1,10 @@
+<div *ngFor="let item of desc" class="desc-container">
+    <div class="desc-text">
+      <h1 class="desc-text-h1">{{item.title}}</h1>
+      <p class="desc-text-p2">{{item.p}}</p>
+      <div class="button-container">
+        <a class="btn btn-danger flex-grow-1 ms-1">{{item.button1}}</a>
+        <a class="btn btn-outline-secondary flex-grow-1 ms-1">{{item.button2}}</a>
+      </div>
+    </div>
+</div>

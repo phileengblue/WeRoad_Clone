@@ -1,0 +1,14 @@
+.hero-overlay {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+  }
+  
+  .nav-header {
+    z-index: 1000;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin: 0 auto; 
+  }
+  

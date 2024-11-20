@@ -1,0 +1,171 @@
+<div class="container">
+  <!-- Intestazione della tabella -->
+  <div class="row text-uppercase text-muted small mb-3 d-none d-md-flex">
+    <div class="col-md-1">Partenza</div>
+    <div class="col-md-2">Meta</div>
+    <div class="col-md-2">Itinerario</div>
+    <div class="col-md-4">Stato</div>
+    <div class="col-md-3">Prezzo</div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-12 text-uppercase text-gray-500 bg-light py-2">
+      {{upcover.month.name}} {{year}}
+    </div>
+  </div>
+
+  <!-- Iterazione sui turni paginati -->
+  <div class="row mb-4" *ngFor="let turn of paginatedTurns">
+    <div class="col-12 d-none d-md-flex align-items-center border-bottom py-4">
+      <!-- Partenza -->
+      <div class="col-md-1 text-center">
+        <div class="h2 font-weight-bold mb-0">
+          {{ turn.start_date | date:'dd' }}
+        </div>
+        <div class="text-uppercase text-muted small">
+          {{ turn.start_date | date:'MMM' }}
+        </div>
+      </div>
+
+      <!-- Meta -->
+      <div class="col-md-2">
+        <div class="font-weight-bold">{{ turn.itineraries }}</div>
+        <div class="text-muted small">
+          Dal {{ turn.start_date | date:'dd MMM' }} al {{ turn.end_date | date:'dd MMM' }}
+        </div>
+        <div class="text-muted small">
+          {{ turn.duration }} giorni • {{ turn.duration - 1 }} notti
+        </div>
+      </div>
+
+      <!-- Itinerario -->
+      <div class="col-md-2">
+        <div>{{ turn.title }}</div>
+        <span class="badge badge-age badge-info mt-2">{{ turn.ageRange }}</span>
+        <span class="badge badge-age badge-info1 mt-2">{{ turn.range }}</span>
+        <img [src]="turn.collection" alt="{{ turn.collection }}" class="collection">
+        <img [src]="turn.logo_weroadx" alt="{{ turn.logo_weroadx }}" class="logo_weroadx">
+      </div>
+
+      <!-- Stato -->
+      <div class="col-md-4">
+        <div *ngIf="turn.status" class="mb-2">
+          <i [ngClass]="getStatusIcon(turn.status)"></i> {{ turn.status }}
+        </div>
+        <div class="d-flex align-items-center">
+          <img [src]="turn.user_image" alt="coordinator" class="rounded-circle mr-2" style="width: 40px; height: 40px;">
+          <div>
+            <div class="small text-uppercase text-muted">Coordinatore</div>
+            <a [href]="turn.link_coordinatorInfo" class="link_coordinator">{{ turn.user_name  }} {{turn.user_surname}}</a>
+          </div>
+        </div>
+        <div class="small text-primary mt-2">
+          <i class="fab fa-facebook"></i>
+          <a class="link_facebook" [href]="turn.link">Chiedi informazioni a {{turn.user_name}} su questo turno nel nostro gruppo Facebook</a>
+        </div>
+      </div>
+
+      <!-- Prezzo -->
+      <div class="col-md-3 text-right">
+        <div class="price-row">
+          <div class="price-info">
+            <div class="text-price">{{ turn.price | currency:'EUR' }}</div>
+            <div class="text-acconto">Acconto {{ turn.acconto | currency:'EUR' }}</div>
+          </div>
+          <a [href]="turn.link" class="btn btn-danger btn-sm ml-3">Vedi viaggio</a>
+        </div>
+        <div class="scalapay-info">
+          o 3 o 4 rate senza interessi.
+          <img src="https://cdn.weroad.io/common/images/logo/logo-scalapay.svg" alt="scalapay">
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile -->
+    <div class="col-12 d-block d-md-none border-bottom rounded p-3 mb-3">
+      <h3 class="font-weight-bold mb-3">
+        <a [href]="turn.link" class="grey no-underline">{{ turn.title }}</a>
+      </h3>
+      <div class="d-flex justify-content-between text-muted small mb-3">
+        <span>
+          {{ turn.start_date | date:'EEE' }}
+          <strong class="text-gray-700">
+            {{ turn.start_date | date:'dd MMM' }}
+          </strong>
+        </span>
+        <div class="arrow mx-2 grow text-center">
+          <span class="number-nights label-turn mb-0 font-label text-gray-500">
+            {{ turn.duration - 1 }}
+          </span>
+        </div>
+        <span>
+          {{ turn.end_date | date:'EEE' }}
+          <strong class="text-gray-700">
+            {{ turn.end_date | date:'dd MMM' }}
+          </strong>
+        </span>
+      </div>
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div *ngIf="turn.status" class="mb-2">
+          <i [ngClass]="getStatusIcon(turn.status)"></i> {{ turn.status }}
+        </div>
+        <span class="badge badge-info">{{ turn.ageRange }}</span>
+        <span class="badge badge-info1">{{ turn.age35 }}</span>
+      </div>
+      <img [src]="turn.logo_weroadx" alt="{{ turn.logo_weroadx }}" class="logo_weroadx">
+      <img [src]="turn.collection" alt="{{ turn.collection }}" class="collection">
+      <div class="d-flex align-items-center mb-3">
+        <img [src]="turn.image" alt="coordinator" class="rounded-circle mr-2" style="width: 40px; height: 40px;">
+        <div>
+          <div class="small text-uppercase text-muted">Coordinatore</div>
+          <div class="font-weight-bold link_facebook">{{ turn.coordinator }}</div>
+        </div>
+      </div>
+      <div class="small link_facebook mb-4">
+        <i class="fab fa-facebook"></i>
+        <a [href]="turn.link_coordinatorInfo">{{ turn.coordinatorInfo }}</a>
+      </div>
+      <div class="pricing-section mb-2">
+        <div class="d-flex justify-content-start">
+          <div class="text-center mr-3">
+            <div class="text-uppercase small text-muted">Totale</div>
+            <div class="font-weight-bold text-gray-700">{{ turn.price | currency:'EUR' }}</div>
+          </div>
+          <div class="text-center mr-3">
+            <div class="text-uppercase small text-muted">Acconto</div>
+            <div class="font-weight-bold text-gray-700">{{ turn.acconto | currency:'EUR' }}</div>
+          </div>
+          <div class="text-center">
+            <div class="text-uppercase small text-muted">Saldo</div>
+            <div class="font-weight-bold text-gray-700">
+              {{ turn.saldo | currency:'EUR' }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <a [href]="turn.link" class="btn btn-danger btn-block mb-3">Vedi viaggio</a>
+      <div class="text-center small text-muted">
+        o 3 o 4 rate senza interessi.
+        <img src="https://cdn.weroad.io/common/images/logo/logo-scalapay.svg" alt="scalapay" style="width: 60px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Controlli di paginazione -->
+  <div class="pagination-controls">
+    <span>Visualizza</span>
+    <select [(ngModel)]="itemsPerPage" (change)="updateItemsPerPage(itemsPerPage)">
+      <option [value]="20">20</option>
+      <option [value]="50">50</option>
+    </select>
+    <button (click)="previousPage()" [disabled]="currentPage === 1">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <span>
+      Pagina <strong>{{ currentPage }}</strong> di <strong>{{ totalPages }}</strong>
+    </span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+</div>

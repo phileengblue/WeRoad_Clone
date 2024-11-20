@@ -1,0 +1,32 @@
+<div class="cart-container">
+  <h2>Carrello</h2>
+
+  <div *ngIf="trips.length > 0; else emptyCart">
+    <div class="trips">
+      <div *ngFor="let trip of trips" class="trip-item">
+        <img [src]="trip.image.url" alt="{{ trip.title }}" />
+        <h3 class="h3">{{ trip.title }}</h3>
+        <p>{{ trip.duration }} giorni</p>
+        <p>Prezzo: {{ trip.price | currency: 'EUR' }}</p>
+        <div class="button-rimuovi">
+        <button (click)="removeTrip(trip.id)">Rimuovi</button>
+      </div>
+      </div>
+      <button (click)="goToHome()">+ Aggiungi viaggio</button>
+    </div>
+
+    <!-- Componente per il totale del carrello -->
+    <app-total-carrell [trips]="trips"></app-total-carrell>
+  </div>
+
+  <ng-template #emptyCart>
+    <div class="empty-cart">Il Carrello è Vuoto!</div>
+  </ng-template>
+
+  <!-- Pulsante di checkout -->
+  <app-check-button [isDisabled]="trips.length === 0"></app-check-button>
+
+  <button *ngIf="trips.length === 0" class="add-new-trip-button" (click)="goToHome()">
+    Desideri aggiungere un nuovo viaggio?
+  </button>
+</div>

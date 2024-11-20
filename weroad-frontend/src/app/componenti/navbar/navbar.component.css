@@ -1,0 +1,493 @@
+.navbar-transparent {
+  background-color: transparent !important;
+}
+
+.icon {
+  height: 32px;
+  width: 117.5px;
+  margin-top: 20px;
+  margin-right: 100px;
+  
+}
+/*quando passi*/
+.form-select {
+  border: none;
+  outline: none;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+ 
+ 
+}
+.profil-icon,
+.icon-green {
+  color: green;
+}
+
+.profil-icon,
+.icon-default {
+  color: grey;
+}
+
+.navbar {
+  overflow: visible;
+  width: 100%;
+
+}
+/*menu con partenze*/
+.dropdown-toggle {
+  background: transparent;
+  border: none;
+  font-size: 16px; 
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 4px; 
+  font-family: "Raleway", sans-serif;
+  
+ 
+}
+
+.dropdown {
+  position: relative;
+  background: transparent;
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute; 
+  z-index: 1001; 
+  /*min-width: 160; Larghezza minima del menu */
+  font-family: "Raleway", sans-serif;
+  color: rgb(50,50,50);
+ 
+ }
+/*visualizzazione del menu (effetto)*/
+.dropdown:hover .dropdown-menu {
+  display: block;
+  
+ 
+
+ 
+}
+/*cambio del mouse*/
+.dropdown>.dropdown-toggle:active {
+  pointer-events: none;
+ 
+}
+
+.dropdown-item { 
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size :14px; 
+  color: rgb(50,50,50);
+  line-height: 19px;
+ }
+
+.nav-eur {
+  margin-top:20px;
+  text-decoration: none;
+  color:white;
+  padding-top: 20px;
+ 
+}
+
+
+
+
+
+
+/*css span drowdown*/
+.bg-warning{
+  margin-left: 10px;
+ 
+}
+
+ 
+.navbar-nav  {
+  margin-right: 20px;
+
+}
+/*icona accedi*/
+.user-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+.user-icon-wrapper img {
+  margin-right: 5px;
+  height: 24px;
+  width: 24px;
+}
+
+.navbar-nav .btn-primary {
+  height: 28px;
+  width: 97.5px;
+  color: rgb(255, 255, 255);
+}
+
+.btn-primary {
+  height: 36px; 
+  width: 120px; 
+  color: #fff;
+  background-color: rgb(65, 128, 137); 
+  border: none;
+  border-radius: 4px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  line-height: 36px;
+  text-decoration: none;
+}
+
+.user-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52.6px;
+  height: 37.6px;
+  border: 1px solid white;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 10px; 
+  margin: 0px 0px 0px 7px;
+}
+
+ 
+
+.user-icon-wrapper img {
+  height: 24px;
+  width: 24px;
+  margin-left:10px;
+}
+
+.btn-primary {
+  height: 36px; 
+  width: 120px; 
+  color: #fff;
+  background-color: rgb(65, 128, 137); 
+  border: none;
+  border-radius: 4px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  line-height: 36px; 
+  text-decoration: none;
+  display: inline-flex; 
+  align-items: center;
+}
+
+.bottone {
+  font-family: "Raleway", sans-serif;
+  height: 36px;
+  width: 92px;
+  font-size: 14px;
+  line-height: 36px;
+  font-weight: 600;
+  color: rgb(65, 128, 137);
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  text-align: center;
+  display: inline-flex; 
+  align-items: center; 
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.img-it {
+  font-size: 12px;
+  height: 16px;
+  width: 16px;
+  border: 0;
+  display: block;
+  margin-top: 10px;
+  margin-left: 3px;
+}
+
+
+
+
+
+
+
+/*css cerca viaggi*/
+
+.span {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px; 
+  color: rgb(100, 100, 100);
+  margin: 0;
+}
+
+
+
+
+.nav-item {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19.6px;
+
+ 
+ 
+}
+/*css eur*/
+.eur{
+  margin-top: 8px;
+  margin-left: 21px;
+  border: 0px solid #f0f0f0;
+}
+
+
+.nav-header {
+  z-index: 1000;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.hero-overlay{
+  position: absolute;
+  left: 70px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .nav-item, .a-text{
+    border-bottom: 1px solid #eee;
+  }
+  
+  .nav-item{
+    padding-bottom: 10px;
+  }
+  .icon-custom {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-size: contain;
+    display: inline-block;
+}
+
+.icon-partenze {
+    background: url('https://cdn.weroad.io/common/images/icons-menu/secondary-color/express.svg') no-repeat center center;
+}
+
+.icon-destinazioni {
+    background: url('https://cdn.weroad.io/common/images/icons-menu/secondary-color/destinations.svg') no-repeat center center;
+}
+
+.icon-fasce-eta {
+    background: url('https://cdn.weroad.io/common/images/icons/destinations.svg') no-repeat center center;
+}
+
+.icon-trip-types {
+    background: url('https://cdn.weroad.io/common/images/icons-menu/secondary-color/directions.svg') no-repeat center center;
+}
+
+.icon-community {
+    background: url('https://cdn.weroad.io/common/images/icons-menu/secondary-color/user.svg') no-repeat center center;
+}
+
+.icon-info {
+    background: url('https://cdn.weroad.io/common/images/icons-menu/secondary-color/how.svg') no-repeat center center;
+}
+
+.language-currency {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.flag-icon {
+    width: 24px;
+    height: auto;
+    margin-right: 10px;
+}
+  .logo-mobile {
+    display: block;
+    width: 134.757px;
+    height: auto;
+  }
+    .navbar{
+    background-color: transparent !important;
+  }  
+
+.navbar-expand {
+width: 100%;
+padding: 9px 0;
+position: relative;
+
+}
+
+.logo-mobile{
+  margin-right:300px;
+  width: 39.55px;
+  height: 28px;
+  margin-top:-10px;
+}
+
+.btn-light{
+  margin-left: 210px;
+  margin-top: -20px;
+  margin-right: 10px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color:#418089;
+  border: 1px solid #418089
+  
+
+
+}
+.pulsante{
+  width: 97.48px;
+  height: 27.6px;
+}
+
+.navbar-toggler{
+margin-top: -20px;
+border: none;
+}
+
+/*css bottoni menu*/
+
+/*bottone offerte*/
+
+.btn1{
+ 
+  width: 110.76px;
+  height: 39.03px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+/*bottone turni*/
+.btn2 {
+  width: 171.71px;
+  height: 39.03px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.navbar-open {
+  background-color: white !important;
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding-bottom: 1000px; 
+}
+
+
+.navbar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+}
+
+.logo-mobile .text-road path.st0 {
+  fill: #FFFFFF;
+}
+
+.navbar-open .logo-mobile .text-road path.st0 {
+  fill: #4D4D4D;
+}
+
+.btn2 {
+  font-family: "Raleway", sans-serif;
+  color:#418089
+}
+
+
+.btn1{
+  font-family: "Raleway", sans-serif;
+  color: #ff4758;
+}
+
+.nav-link d-flex{
+  color: #4d4d4d;
+  font-family: "Raleway", sans-serif;
+  
+}
+
+
+.btn btn-light {
+  padding: 0.5em .7em;
+  font-family: "Raleway", sans-serif;
+  border-radius: 0.375rem;
+ 
+}
+
+.a-text{
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #4D4D4D;
+  }
+
+  .a-tendina{
+    font-family: "Raleway", sans-serif;
+    font-weight: 400px;
+    size: 16px;
+    line-height: 22px;
+    color: rgb(77,77,77);
+}
+
+.nav-link{
+  font-family: "Raleway", sans-serif;
+    font-weight: 400px;
+    size: 14px;
+    line-height: 19px;
+    color: rgb(85,85,85);
+    border-bottom: 1px solid #eee;
+}
+
+.bottoni{
+padding-bottom: 10px;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

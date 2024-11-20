@@ -1,0 +1,17 @@
+<div class="container-xxl">
+<div class="grid-container">
+  <div class="grid-item item1" *ngFor="let card of card; let i = index" [ngClass]="'item' + (i+1)">
+    <img [src]="card.Image" [alt]="card.title">
+    <div class="overlay"></div>
+    <div class="text-content">
+      <strong>{{ card.title }}</strong>
+      <p>{{ card.p }}</p>
+    </div>
+    <button class="button"></button>
+  </div>
+</div>
+</div>
+
+
+
+

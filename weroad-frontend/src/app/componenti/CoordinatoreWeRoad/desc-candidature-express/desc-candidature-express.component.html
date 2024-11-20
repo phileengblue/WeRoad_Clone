@@ -1,0 +1,10 @@
+<div class="container">
+    <div *ngFor="let item of desc" class="express-card">
+      <img [src]="item.icon" alt="Icon" class="icon">
+      <div class="text-content">
+        <h2 class="text-content-h2">{{ item.tilte }}</h2>
+        <p class="text-content-p">{{ item.p }}</p>
+      </div>
+    </div>
+  </div>
+  

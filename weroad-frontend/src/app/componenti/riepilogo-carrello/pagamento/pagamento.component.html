@@ -1,0 +1,63 @@
+<div class="section pagamento">
+  <h3>Pagamento</h3>
+  <form [formGroup]="pagamentoForm" (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <label for="numeroCarta">N. Carta <span class="required">*</span></label>
+      <input
+        id="numeroCarta"
+        type="text"
+        formControlName="numeroCarta"
+        inputmode="numeric"
+        placeholder="1234 5678 9012 3456"
+        (input)="formatNumeroCarta($event)"
+      />
+      <div *ngIf="pagamentoForm.get('numeroCarta')?.invalid && pagamentoForm.get('numeroCarta')?.touched" class="error">
+        Inserisci un numero di carta valido (16 cifre).
+      </div>
+    </div>
+
+    <div class="input-group">
+      <label for="dataScadenza">Data scadenza <span class="required">*</span></label>
+      <input
+        id="dataScadenza"
+        type="text"
+        formControlName="dataScadenza"
+        inputmode="numeric"
+        placeholder="MM/YY"
+        (input)="formatDataScadenza($event)"
+      />
+      <div *ngIf="pagamentoForm.get('dataScadenza')?.invalid && pagamentoForm.get('dataScadenza')?.touched" class="error">
+        Inserisci una data valida (MM/YY).
+      </div>
+    </div>
+
+    <div class="input-group">
+      <label for="CVV">CVV <span class="required">*</span></label>
+      <input
+        id="CVV"
+        type="password"
+        formControlName="pin"
+        inputmode="numeric"
+        placeholder="3 cifre max"
+        (input)="formatCVV($event)"
+      />
+      <div *ngIf="pagamentoForm.get('pin')?.invalid && pagamentoForm.get('pin')?.touched" class="error">
+        Inserisci un CVV valido (3 cifre).
+      </div>
+    </div>
+
+    <div class="input-group">
+      <label for="nominativo">Nominativo <span class="required">*</span></label>
+      <input
+        id="nominativo"
+        type="text"
+        formControlName="nominativo"
+        placeholder="Nome e cognome"
+      />
+      <div *ngIf="pagamentoForm.get('nominativo')?.invalid && pagamentoForm.get('nominativo')?.touched" class="error">
+        Inserisci un nominativo valido.
+      </div>
+    </div>
+  </form>
+</div>
+

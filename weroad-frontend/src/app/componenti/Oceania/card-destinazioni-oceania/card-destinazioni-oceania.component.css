@@ -1,0 +1,226 @@
+
+.total-container{
+  padding: 80px;
+  background-color: #eff2f4;
+}
+
+.nameCountry-text-h1 {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap:2;
+}
+
+.central-card {
+  order: 1;
+  width: 100%;
+  gap: 2;
+  
+}
+
+/*Da modificare in base alla pagina scelta*/
+@media (min-width: 768px) {
+  .total-container{
+    padding: 40px;
+    background-color: #eff2f4;
+  }
+  .central-card {
+      order: initial;
+      width: calc(100% / 3);
+      gap: 2;
+      margin-left: 440px;
+  }
+}
+
+@media (max-width: 767px) {
+  .total-container{
+    padding: 18px;
+    background-color: #eff2f4;
+  }
+}
+/*---------------------------------------*/
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 500px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-family: "Raleway", sans-serif; 
+  font-size: 21.6px;
+  font-weight: bold;
+  transition: text-decoration 0.3s;
+}
+
+.card-title:hover {
+  text-decoration: underline;
+}
+
+.card-text {
+  font-family: "Raleway", sans-serif;  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-logo {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 160px;
+  height: auto;
+}
+
+.card-price {
+  color: red;
+  font-family: "Raleway", sans-serif;  font-size: 26px;
+  font-weight: bold;
+}
+
+.card-price-euro{
+  color: red;
+  font-family: "Raleway", sans-serif;  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 30px; 
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-outline-primary {
+  color: #41a2d1;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-outline-primary:hover {
+  color: #41a2d1;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn-danger {
+  background-color: #ff4c4c;
+  border-color: #ff4c4c;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-danger:hover {
+  background-color: #ff1a1a;
+  border-color: #ff1a1a;
+}
+
+.d-flex .btn + .btn {
+  margin-left: 1rem;
+}
+
+.stars-overlay {
+  background: #00a76f;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+
+.rating-value {
+  margin-left: 15px;
+  font-family: "Raleway", sans-serif;  font-size: 16px;
+  font-weight: bold;
+  color: #111010;
+}
+
+:host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-first {
+  color: #ffffff;
+}
+
+:host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-second {
+  color: #00a76f;
+}
+
+:host ::ng-deep .ant-rate-star-full .ant-rate-star-second,
+:host ::ng-deep .ant-rate-star-half .ant-rate-star-second {
+  color: #ffffff;
+}
+
+:host ::ng-deep .ant-rate-star-first {
+  color: #00a76f;
+}
+
+:host ::ng-deep .ant-rate-star.ant-rate-star-zero .ant-rate-star-second {
+  color: #787878;
+}
+
+:host ::ng-deep .ant-rate-star {
+  font-size: 16px;
+  margin-right: 2px;
+}
+
+:host ::ng-deep .ant-rate {
+  display: flex;
+  align-items: center;
+}
+
+:host ::ng-deep .ant-rate-text {
+  margin-left: 5px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    /*width: 379px;
+    height: 485,34px;
+    margin: 0 0 20px;
+    padding: 0 10px;*/
+    
+  }
+
+  .col-md-4 {
+    width: 100%; 
+   
+  }
+
+  .card {
+    min-height: 550px;
+    
+  }
+
+  .card-img-top {
+    height: 280px;
+  }
+
+  .card-body {
+    padding: 20px; 
+  }
+
+  .central-card {
+    margin-left: 0;
+    width: 100%; 
+  }
+}

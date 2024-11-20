@@ -1,0 +1,24 @@
+<div class="hero-overlay">
+    <app-navbar class="nav-header"></app-navbar>
+</div>
+<app-image-hero [trip]="tripDetails"></app-image-hero>
+<app-modal-calendar [trip]="tripDetails" ></app-modal-calendar>
+<app-carousel-percentual ></app-carousel-percentual>
+<app-details-text [trip]="tripDetails"></app-details-text>
+<app-component-recensioni ></app-component-recensioni>
+<app-six-grid-details-trip [trip]="tripDetails" ></app-six-grid-details-trip>
+<app-details-coordinatori ></app-details-coordinatori>
+<app-info-details ></app-info-details>
+<app-table-details ></app-table-details>
+<app-carosello-details></app-carosello-details>
+<app-footer></app-footer>
+
+<div *ngIf="close" class="banner sticky-bottom">
+    <div class="d-flex justify-content-center align-items-center mt-2">
+        <div class="d-flex align-items-baseline">
+            <p class="me-3">LAST CALL: sconti fino a €300 sugli ultimi posti disponibili!</p>
+            <button class="banner-button">Scoprili</button>
+        </div>
+        <button type="button" class="btn-close x-custom-position" aria-label="Close" data-bs-dismiss="banner" (click)="closeBanner()"></button>
+    </div>
+</div>

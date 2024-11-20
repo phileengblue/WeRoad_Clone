@@ -1,0 +1,134 @@
+<div class="container">
+    <h2 class="fw-bold font-h2 text-color mb-5">Date Disponibili</h2>
+
+    <div class="row text-uppercase text-muted small mb-3 d-none d-md-flex">
+      <div class="col-md-1">Partenza</div>
+      <div class="col-md-2">Meta</div>
+      <div class="col-md-2">Itinerario</div>
+      <div class="col-md-4">Stato</div>
+      <div class="col-md-3">Prezzo</div>
+    </div>
+  
+  
+    <div class="row mb-4" *ngFor="let turn of paginatedTurns">
+      <!--Desktop-->
+      <div class="col-12 d-none d-md-flex align-items-center border-bottom py-4">
+        <div class="col-md-1 text-center">
+          <div class="h2 font-weight-bold mb-0">{{ turn.startDate.split(' ')[0] }}</div>
+          <div class="text-uppercase text-muted small">{{ turn.startDate.split(' ')[1] }}</div>
+        </div>
+        <div class="col-md-2">
+          <div class="font-weight-bold">{{ turn.title }}</div>
+          <div class="text-muted small">Dal {{ turn.startDate }} al {{ turn.endDate }}</div>
+          <div class="text-muted small">{{ turn.days }} • {{ turn.nights }}</div>
+        </div>
+        <div class="col-md-2">
+          <div>{{ turn.intenerario }}</div>
+          <span class="badge badge-age badge-info mt-2">{{ turn.ageRange }}</span>
+          <span class="badge badge-age badge-info1 mt-2">{{ turn.age35 }}</span>
+          <img [src]="turn.collection" alt="{{turn.collection}}" class="collection">
+          <img [src]="turn.logo_weroadx" alt="{{turn.logo_weroadx}}" class="logo_weroadx">
+        </div>
+        <div class="col-md-4">
+          <div *ngIf="turn.status" class="text-fire mb-2">
+            <i class="fas fa-fire text-danger"></i> {{ turn.status }}
+          </div>
+          <div *ngIf="turn.like_su" class="text-fire mb-2">
+            <i class="fa-solid like_green fa-thumbs-up"></i> {{ turn.like_su }}
+          </div>
+          <div *ngIf="turn.status2" class="text-fire mb-2">
+            <i class="fa-solid rewind-orange fa-clock-rotate-left"></i>{{ turn.status2}}
+          </div>
+          <div class="d-flex align-items-center">
+            <img [src]="turn.image" alt="coordinator" class="rounded-circle mr-2" style="width: 40px; height: 40px;">
+            <div>
+              <div class="small text-uppercase text-muted">Coordinatore</div>
+              <a class="link_coordinator"> {{turn.link_coordinator}}{{turn.coordinator}}</a>
+            </div>
+          </div>
+          <div class="small text-primary mt-2">
+            <i class="fab link_facebook fa-facebook"></i><a class="link_facebook"
+              href={{turn.link_coordinatorInfo}}>{{turn.coordinatorInfo}}</a>
+          </div>
+        </div>
+        <div class="col-md-3 text-right">
+          <div class="price-row">
+            <div class="price-info">
+              <div class="text-price">{{ turn.total }}</div>
+              <div class="text-acconto">Acconto {{ turn.deposit }}</div>
+            </div>
+            <a [href]="turn.link" class="btn btn-danger btn-sm ml-3">Vedi viaggio</a>
+          </div>
+          <div class="scalapay-info">
+            o 3 o 4 rate senza interessi.
+            <img src="https://cdn.weroad.io/common/images/logo/logo-scalapay.svg" alt="scalapay">
+          </div>
+        </div>
+      </div>
+  
+      <!--Mobile-->
+      <div class="col-12 d-block d-md-none border-bottom rounded p-3 mb-3">
+        <h3 class="font-weight-bold mb-3">
+          <a [href]="turn.link" class="grey no-underline">{{ turn.title }}</a>
+        </h3>
+        <div class="d-flex justify-content-between text-muted small mb-3">
+          <span>ven <strong class="text-gray-700">{{ turn.startDate.split(' ')[0] }} {{ turn.startDate.split(' ')[1]
+              }}</strong></span>
+          <div class="arrow mx-2 grow text-center">
+            <span class="number-nights label-turn mb-0 font-label text-gray-500">{{ turn.nights }}</span>
+          </div>
+          <span>ven <strong class="text-gray-700">{{ turn.endDate.split(' ')[0] }} {{ turn.endDate.split(' ')[1]
+              }}</strong></span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div *ngIf="turn.status" class="text-fire">
+            <i class="fas fa-fire text-danger"></i> {{ turn.status }}
+          </div>
+          <div *ngIf="turn.like_su" class="text-fire">
+            <i class="fa-solid like_green fa-thumbs-up"></i> {{ turn.like_su }}
+          </div>
+          <div *ngIf="turn.status2" class="text-fire">
+            <i class="fa-solid rewind-orange fa-clock-rotate-left"></i>{{ turn.status2}}
+          </div>
+          <span class="badge badge-info">{{ turn.ageRange }}</span>
+          <span class="badge badge-info1">{{ turn.age35 }}</span>
+        </div>
+        <img [src]="turn.logo_weroadx" alt="{{turn.logo_weroadx}}" class="logo_weroadx">
+  
+  
+  
+        <img [src]="turn.collection" alt="{{turn.collection}}" class="collection">
+        <div class="d-flex align-items-center mb-3">
+          <img [src]="turn.image" alt="coordinator" class="rounded-circle mr-2" style="width: 40px; height: 40px;">
+          <div>
+            <div class="small text-uppercase text-muted">Coordinatore</div>
+            <div class="font-weight-bold link_facebook">{{ turn.coordinator }}</div>
+          </div>
+        </div>
+        <div class="small link_facebook mb-4">
+          <i class="fab fa-facebook"></i> {{ turn.coordinatorInfo }}
+        </div>
+        <div class="pricing-section mb-2">
+          <div class="d-flex justify-content-start">
+            <div class="text-center mr-3">
+              <div class="text-uppercase small text-muted">Totale</div>
+              <div class="font-weight-bold text-gray-700">{{ turn.total }}</div>
+            </div>
+            <div class="text-center mr-3">
+              <div class="text-uppercase small text-muted">Acconto</div>
+              <div class="font-weight-bold text-gray-700">{{ turn.deposit }}</div>
+            </div>
+            <div class="text-center">
+              <div class="text-uppercase small text-muted">Saldo</div>
+              <div class="font-weight-bold text-gray-700">{{ turn.balance }}</div>
+            </div>
+          </div>
+        </div>
+        <a [href]="turn.link" class="btn btn-danger btn-block mb-3">Vedi viaggio</a>
+        <div class="text-center small text-muted">
+          o 3 o 4 rate senza interessi.
+          <img src="https://cdn.weroad.io/common/images/logo/logo-scalapay.svg" alt="scalapay" style="width: 60px;">
+        </div>
+      </div>
+    </div>
+  </div>

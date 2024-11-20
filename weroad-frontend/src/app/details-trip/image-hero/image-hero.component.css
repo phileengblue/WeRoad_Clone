@@ -1,0 +1,246 @@
+.up-cover-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+  }
+
+  .up-cover-image {
+    width: 100%;
+    height:100vh;
+    display: block;
+    max-height: 1000px; 
+    object-fit: cover;
+    filter: brightness(70%);
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+
+  .up-cover-text {
+    position: absolute;
+    bottom: 30px;  
+    left: 30px;    
+    text-align: left;  
+    padding: 0 15px;
+  }
+  
+  .up-cover-text-h1 {
+    font-size: 48px;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+  }
+ 
+  .up-cover-text-p {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: 'FONTSPRING DEMO - Proxima-Nova', sans-serif;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+  }
+/*icona star*/
+  .star-img {
+    height: 20px;
+    width: 20px;
+}
+  /*Rating*/
+  .stars-overlay {
+    position: absolute;
+    transform: translateX(145%) translateY(40%);
+    background: #00a76f;
+    padding: 1px;
+    margin-left: 112px;
+    margin-top: -7px;
+    display: flex;
+    align-items: center;
+}
+ 
+:host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-first {
+    color: #ffffff;
+}
+ 
+:host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-second {
+    color: #00a76f;
+}
+ 
+:host ::ng-deep .ant-rate-star-full .ant-rate-star-second,
+:host ::ng-deep .ant-rate-star-half .ant-rate-star-second {
+    color: #ffffff;
+}
+ 
+:host ::ng-deep .ant-rate-star-first {
+    color: #00a76f;
+}
+ 
+:host ::ng-deep .ant-rate-star.ant-rate-star-zero .ant-rate-star-second {
+    color: #787878;
+}
+ 
+:host ::ng-deep .ant-rate-star {
+    font-size: 16px;
+    margin-right: 2px;
+}
+ 
+:host ::ng-deep .ant-rate {
+    display: flex;
+    align-items: center;
+}
+ 
+:host ::ng-deep .ant-rate-star {
+    margin-left: 5px;
+    font-size: 8px;
+    color: #ffffff;
+}
+
+.calendar-img {
+    height: 25px;
+    width: 25px;
+    transform:  translateY(-8%);
+}
+
+.day-night-img {
+    height: 30px;
+    width: 30px;
+    transform:  translateY(-12%);
+}
+
+.first-departure-color {
+    color: #828282;
+    font-size: 12px;
+}
+
+.first-departure-price-color {
+    color: #4D4D4D;
+    font-size: 24px;
+}
+
+.first-departure-button {
+    width: 217px;
+    height: 43.60px;
+    border-radius: 8px;
+    background-color: #FF4859;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+.first-departure-button:hover {
+    background-color: #f51f47;
+}
+
+.line{
+    border: 0.5px solid #E8E8E8;
+    width: 320px;
+}
+
+.first-departure-price-position {
+    transform:  translateY(-20%);
+}
+
+.p-scalapay-color {
+    color: #656565;
+    font-size: 12px;
+}
+
+.scalapay-img {
+    height: 15px;
+    width: 65px;
+}
+
+  .d-flex {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;  
+  }
+
+  .first-departure-details {
+    margin-top: 10px;
+  }
+  
+  .first-departure-color {
+    color: #ffffff;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  
+  .calendar-img, .day-night-img {
+    height: 20px;
+    width: 20px;
+  }
+  
+  /* Responsività per tablet */
+  @media (max-width: 1024px) {
+    .up-cover-image {
+      max-height: 900px;  
+    }
+  
+    .up-cover-text-h1 {
+      font-size: 32px; 
+    }
+  
+    .up-cover-text {
+      bottom: 20px; 
+      left: 20px;   
+    }
+
+    .first-departure-details {
+      display: block;
+      margin-top: 15px;
+    }
+  
+    .first-departure-color {
+      font-size: 14px;
+    }
+  
+    .calendar-img, .day-night-img {
+      height: 18px;
+      width: 18px;
+    }
+  }
+  
+  /* Responsività per mobile */
+  @media (max-width: 768px) {
+    .up-cover-image {
+      max-height: 800px;  
+    }
+  
+    .up-cover-text-h1 {
+      font-size: 24px;  
+    }
+  
+    .up-cover-text {
+      bottom: 15px;  
+      left: 15px;     
+    }
+
+    .first-departure-details {
+      display: block;
+      margin-top: 10px;
+    }
+  
+    .first-departure-color {
+      font-size: 12px;
+    }
+  
+    .calendar-img, .day-night-img {
+      height: 15px;
+      width: 15px;
+    }
+  }
+  
+  @media (max-width: 1964px) {
+    .up-cover-image {
+      max-height: 700px;  
+    } 
+
+  }
+
+
+  
+
+  
+
+  

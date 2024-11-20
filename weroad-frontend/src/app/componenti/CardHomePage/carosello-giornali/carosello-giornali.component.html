@@ -1,0 +1,53 @@
+<div class="carousel-container container-fluid"></div>
+
+<h2 class="carousel-title" *ngIf="isMobileView()"> {{ carouselTitle[0] }}</h2>
+
+<div id="carouselExampleDark" class="carousel slide container-fluid">
+    <div class="carousel-indicators">
+        <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            [class.active]="currentSlide === 0"
+            aria-label="Slide 1">
+        </button>
+        <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            [class.active]="currentSlide === 1"
+            aria-label="Slide 2">
+        </button>
+    </div>
+
+    <div class="carousel-inner container-fluid">
+        <div
+            *ngFor="let item of visibleGiornali; let i = index"
+            class="carousel-item"
+            [class.active]="i === 0"
+            [attr.data-bs-interval]="10000">
+            <div class="carousel-content">
+                <p class="carousel-text">“</p>
+                <p class="carousel-text">{{ item.p }}</p>
+                <img [src]="item.logo" class="carousel-logo" alt="Logo giornale">
+            </div>
+        </div>
+    </div>
+
+    <button
+        class="carousel-control-prev"
+        type="button"
+        (click)="scrollLeft()"
+        style="justify-content: flex-start;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+        class="carousel-control-next"
+        type="button"
+        (click)="scrollRight()"
+        style="justify-content: flex-end;">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>

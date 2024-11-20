@@ -1,0 +1,49 @@
+<div class="section indirizzo-fatturazione">
+  <h3>Indirizzo di Fatturazione</h3>
+  <form [formGroup]="indirizzoForm" (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <label>Piazza, via <span class="required">*</span></label>
+      <input type="text" formControlName="via" placeholder="Inserisci la via" />
+      <p *ngIf="indirizzoForm.get('via')?.invalid && indirizzoForm.get('via')?.touched" class="error">
+        Inserisci solo lettere e spazi.
+      </p>
+    </div>
+
+    <div class="input-group">
+      <label>N. Civico <span class="required">*</span></label>
+      <input type="text" formControlName="numeroCivico" placeholder="Inserisci il numero civico" />
+      <p *ngIf="indirizzoForm.get('numeroCivico')?.invalid && indirizzoForm.get('numeroCivico')?.touched" class="error">
+        Inserisci solo numeri.
+      </p>
+    </div>
+
+    <div class="input-group">
+      <label>CAP <span class="required">*</span></label>
+      <input type="text" formControlName="cap" placeholder="Inserisci il CAP" maxlength="5" />
+      <p *ngIf="indirizzoForm.get('cap')?.invalid && indirizzoForm.get('cap')?.touched" class="error">
+        Inserisci solo numeri (massimo 5 cifre).
+      </p>
+    </div>
+
+    <div class="input-group">
+      <label>Città <span class="required">*</span></label>
+      <input type="text" formControlName="citta" placeholder="Inserisci la città" />
+      <p *ngIf="indirizzoForm.get('citta')?.invalid && indirizzoForm.get('citta')?.touched" class="error">
+        Inserisci solo lettere e spazi.
+      </p>
+    </div>
+
+    <div class="input-group">
+      <label>Nazione <span class="required">*</span></label>
+      <input type="text" formControlName="nazione" placeholder="Inserisci la nazione" />
+      <p *ngIf="indirizzoForm.get('nazione')?.invalid && indirizzoForm.get('nazione')?.touched" class="error">
+        Inserisci solo lettere e spazi.
+      </p>
+    </div>
+  </form>
+</div>
+
+
+
+
+  

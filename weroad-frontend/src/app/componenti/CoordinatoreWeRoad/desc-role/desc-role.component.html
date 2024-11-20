@@ -1,0 +1,12 @@
+<div *ngFor="let item of desc" class="desc-container">
+    <div class="desc-text">
+      <h1 class="desc-text-h1">{{item.title}}</h1>
+      <p class="desc-text-p1">{{item.subtitle}}</p>
+      <p class="desc-text-p2">{{item.p1}}</p>
+      <p class="desc-text-p2">{{item.p2}}</p>
+      <p class="desc-text-p2">{{item.p3}}</p>
+      <div class="button-container">
+        <a class="btn btn-danger flex-grow-1 ms-1" (click)="scrollTo('Scopri il processo di selezione')">{{item.button1}}</a>
+      </div>
+    </div>
+</div>

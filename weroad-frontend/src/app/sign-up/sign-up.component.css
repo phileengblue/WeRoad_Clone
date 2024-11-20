@@ -1,0 +1,108 @@
+/*Header*/
+.header-container {
+  height: 54px;
+  width: 100%;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+/*Icona-weroad*/
+.weroad-icon {
+  height: 33px;
+  width: 121px;
+}
+
+/*Sottotiolo*/
+.submit-size {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Linea */
+.divider {
+  border: 0.5px solid #FF4658;  
+  margin: 5px 0;
+  width: 319px;
+}
+
+/*INPUT*/
+/*label*/
+.form-label {
+  font-size: 16px;
+}
+
+/*Bordi degli input */
+.form-control, .form-check-input {
+border-color: #DDDDDD;
+} 
+
+/*Bordi con focus*/
+input:focus {
+box-shadow: none;
+border-color: #4D4D4D;
+}
+
+/*Bottone*/
+.btn-custom { 
+  background-color: #4D4D4D;
+  border-color: #4D4D4D;
+  color: #fff;
+  font-size: 12px;
+}
+
+.btn-custom:hover {
+  background-color: #fff;
+  border-color: #4D4D4D;
+  color: black;
+} 
+
+/*check*/
+.fs-check {
+font-size: 12px;
+} 
+
+.form-check-input:focus {
+box-shadow: none;
+border-color: #d0caca;
+}
+
+.form-check-input:checked {
+background-color: #bab6b6;
+}
+
+.form-check-input:active {
+background-color: #b5b1b1;
+border-color: #d0caca;
+} 
+
+/*Visualizzazione da tablet e +*/
+@media screen and (min-width: 768px) {
+.divider {
+  margin: 5px 0;
+  width: 528px;
+} 
+
+.form-label {
+  font-size: 18px;
+}
+
+.submit-size {
+  font-size: 16px;
+}
+}
+
+/*Visualizzazione da pc*/
+@media screen and (min-width: 992px) {
+.divider {
+  margin: 5px 0;
+  width: 680px;
+} 
+
+.form-label {
+  font-size: 20px;
+}
+
+.submit-size {
+  font-size: 20px;
+  font-weight: normal;
+}
+}

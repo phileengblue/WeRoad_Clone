@@ -1,0 +1,753 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.footer-top {
+  background-color: rgb(21, 21, 21);
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-top .newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.footer-top .email-input {
+  padding: 8px 25px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  width: 300px;
+}
+
+.footer-top .btn-newsletter {
+  border: none;
+  background-color: #ff4758;
+  padding: 8px 25px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.footer-top p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.footer-bottom {
+  background-color: #111;
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: rgb(250, 70, 87);
+}
+
+.footer-bottom a:hover {
+  transform: translateX(10px);
+}
+
+.footer-bottom h5 {
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-bottom ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.footer-bottom .trustpilot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-bottom .trustpilot svg {
+  margin-right: 10px;
+}
+
+.footer-bottom .trustpilot .icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-bottom ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-bottom ul li {
+  display: block;
+  margin-bottom: 5px;
+
+}
+
+.footer-bottom ul li a {
+  font-size: 12px;
+  color: rgb(250, 71, 88);
+  transition: transform 0.3s ease-out;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+
+}
+
+.footer-bottom ul li a:hover {
+  transform: translateX(10px);
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  color: #bbb;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.payment-methods img {
+  width: 40px;
+  height: auto;
+}
+
+.stars-overlay {
+  background: #00a76f;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+:host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-first {
+  color: #ffffff;
+}
+
+:host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-second {
+  color: #00a76f;
+}
+
+:host ::ng-deep .ant-rate-star-full .ant-rate-star-second,
+:host ::ng-deep .ant-rate-star-half .ant-rate-star-second {
+  color: #ffffff;
+}
+
+:host ::ng-deep .ant-rate-star-first {
+  color: #00a76f;
+}
+
+:host ::ng-deep .ant-rate-star.ant-rate-star-zero .ant-rate-star-second {
+  color: #787878;
+}
+
+:host ::ng-deep .ant-rate-star {
+  font-size: 30px;
+  margin-right: 2px;
+}
+
+:host ::ng-deep .ant-rate {
+  display: flex;
+  align-items: center;
+}
+
+:host ::ng-deep .ant-rate-text {
+  margin-left: 5px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.logo-footer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+svg {
+  width: auto;
+  height: 30px;
+  transition: all .3s;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-methods img {
+  width: 40px;
+  height: auto;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icon-container a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  background-color: rgb(21, 21, 21);
+  font-size: 12px;
+}
+
+.aggiorna {
+  color: rgb(250, 70, 87);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.footer-bottom .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-bottom .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.footer-bottom .col-md-3 {
+  flex: 0 0 23%;
+  max-width: 23%;
+  margin-bottom: 20px;
+}
+
+.sezione2 {
+  background-color: rgb(17, 17, 17);
+}
+
+.aggiorna {
+  color: rgb(250, 70, 87);
+}
+
+.logo-top {
+  position: absolute;
+  margin-left: 135px;
+  margin-top: 7px;
+}
+
+.social-display {
+  position: absolute;
+  margin-top: -100px;
+  margin-left: 1416px;
+}
+
+.text-footer {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.br-footer {
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 1880px) {
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .footer-top {
+    background-color: rgb(21, 21, 21);
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+  }
+
+  .footer-top .newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .footer-top .email-input {
+    padding: 8px 25px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+  }
+
+  .footer-top .btn-newsletter {
+    border: none;
+    background-color: #ff4758;
+    padding: 8px 25px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+
+  .footer-top p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+  .footer-bottom {
+    background-color: #111;
+    padding: 40px 0;
+    color: #fff;
+    text-align: center;
+  }
+
+  .footer-bottom a {
+    color: rgb(250, 70, 87);
+  }
+
+  .footer-bottom a:hover {
+    transform: translateX(10px);
+  }
+
+  .footer-bottom h5 {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .footer-bottom ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .footer-bottom {
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
+  .footer-bottom .trustpilot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footer-bottom .trustpilot svg {
+    margin-right: 10px;
+  }
+
+  .footer-bottom .trustpilot .icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .footer-bottom ul li {
+    display: block;
+    margin-bottom: 5px;
+
+  }
+
+  .footer-bottom ul li a {
+    font-size: 14px;
+    color: rgb(250, 71, 88);
+    transition: transform 0.3s ease-out;
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 20px;
+
+  }
+
+  .footer-bottom ul li a:hover {
+    transform: translateX(10px);
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+    color: #bbb;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .payment-methods img {
+    width: 40px;
+    height: auto;
+  }
+
+  .stars-overlay {
+    background: #00a76f;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  :host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-first {
+    color: #ffffff;
+  }
+
+  :host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-second {
+    color: #00a76f;
+  }
+
+  :host ::ng-deep .ant-rate-star-full .ant-rate-star-second,
+  :host ::ng-deep .ant-rate-star-half .ant-rate-star-second {
+    color: #ffffff;
+  }
+
+  :host ::ng-deep .ant-rate-star-first {
+    color: #00a76f;
+  }
+
+  :host ::ng-deep .ant-rate-star.ant-rate-star-zero .ant-rate-star-second {
+    color: #787878;
+  }
+
+  :host ::ng-deep .ant-rate-star {
+    font-size: 30px;
+    margin-right: 2px;
+  }
+
+  :host ::ng-deep .ant-rate {
+    display: flex;
+    align-items: center;
+  }
+
+  :host ::ng-deep .ant-rate-text {
+    margin-left: 5px;
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  .logo-footer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  svg {
+    width: auto;
+    height: 30px;
+    transition: all .3s;
+  }
+
+  .payment-methods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .payment-methods img {
+    width: 40px;
+    height: auto;
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .icon-container a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-bottom {
+    background-color: rgb(21, 21, 21);
+    font-size: 12px;
+  }
+
+  .aggiorna {
+    color: rgb(250, 70, 87);
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+
+  .footer-bottom .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-bottom .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .footer-bottom .col-md-3 {
+    flex: 0 0 23%;
+    max-width: 23%;
+    margin-bottom: 20px;
+  }
+
+  .sezione2 {
+    background-color: rgb(17, 17, 17);
+  }
+
+  .aggiorna {
+    color: rgb(250, 70, 87);
+  }
+
+  .logo-top {
+    position: absolute;
+    margin-left: 135px;
+    margin-top: 7px;
+  }
+
+  .social-display {
+    position: absolute;
+    margin-top: -100px;
+    margin-left: 1156px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .container,
+  .footer-top {
+    padding: 12px;
+    background-color: rgb(17, 17, 17);
+  }
+
+  .text-center {
+    font-size: 14px;
+    color: white;
+  }
+
+  .logo-footer {
+    display: block;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+  }
+
+  svg {
+    width: auto;
+    height: 28px;
+    transition: all .3s;
+  }
+
+  .sezione-1 {
+    width: 100%;
+    height: auto;
+  }
+
+  .bi {
+    margin-top: 20px;
+    font-size: 22px;
+    opacity: .7;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0 10px;
+  }
+
+  .opacity-10 {
+    opacity: 0.1;
+  }
+
+  .border-white {
+    border-color: white !important;
+  }
+
+  .stars-overlay {
+    background: #00a76f;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  :host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-first {
+    color: #ffffff;
+  }
+
+  :host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-second {
+    color: #00a76f;
+  }
+
+  :host ::ng-deep .ant-rate-star-full .ant-rate-star-second,
+  :host ::ng-deep .ant-rate-star-half .ant-rate-star-second {
+    color: #ffffff;
+  }
+
+  :host ::ng-deep .ant-rate-star-first {
+    color: #00a76f;
+  }
+
+  :host ::ng-deep .ant-rate-star.ant-rate-star-zero .ant-rate-star-second {
+    color: #787878;
+  }
+
+  :host ::ng-deep .ant-rate-star {
+    font-size: 30px;
+    margin-right: 2px;
+  }
+
+  :host ::ng-deep .ant-rate {
+    display: flex;
+    align-items: center;
+  }
+
+  :host ::ng-deep .ant-rate-text {
+    margin-left: 5px;
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  .footer-bottom {
+    background-color: rgb(17, 17, 17);
+    padding: 10px 0;
+  }
+
+  .footer-links .footer-menu {
+    display: none;
+    background-color: rgb(17, 17, 17);
+    padding: 10px;
+  }
+
+  .footer-links .footer-menu.show {
+    display: block;
+  }
+
+  .footer-menu .row {
+    margin-top: 20px;
+  }
+
+  .footer-menu .col {
+    margin-bottom: 10px;
+  }
+
+  .footer-menu .list-unstyled {
+    padding-left: 0;
+    color: rgb(250, 70, 87);
+    font-size: 14px;
+    text-align: start;
+  }
+
+  .footer-menu .list-unstyled li {
+    margin-bottom: 10px;
+  }
+
+  .footer-menu .list-unstyled a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-menu .list-unstyled a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-info {
+    margin-top: 20px;
+    color: white;
+  }
+
+  .footer-info p {
+    margin-bottom: 5px;
+  }
+
+  .payment-methods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .payment-methods img {
+    width: 40px;
+    height: auto;
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .icon-container a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-bottom {
+    background-color: rgb(17, 17, 17);
+    font-size: 12px;
+  }
+
+  .sezione2 {
+    background-color: rgb(17, 17, 17);
+  }
+
+  .sezione-1 {
+    background-color: rgb(21, 21, 21);
+  }
+
+  .aggiorna {
+    color: rgb(250, 70, 87);
+  }
+}

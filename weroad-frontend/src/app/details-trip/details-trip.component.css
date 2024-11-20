@@ -1,0 +1,31 @@
+  /*Banner*/
+  .banner{
+    border: 1px solid #FB4657;
+    height: 59px;
+    width: 100%;
+    background-color: #FB4657;
+    color: white
+}
+
+.banner-button{
+    height: 39px;
+    width: 77px;
+    color: #417E87;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    border: none;
+}
+
+.hero-overlay {
+  position: relative;
+  display: flex;
+  justify-content: center; 
+}
+
+.nav-header {
+  z-index: 1000;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin: 0 auto; 
+}

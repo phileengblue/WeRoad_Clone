@@ -1,0 +1,209 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+      <div class="search-bar d-flex align-items-center p-2 justify-content-between">
+        <!-- Dove? -->
+        <div class="d-flex align-items-center pe-3">
+          <div class="icon me-2">
+            <svg width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z">
+              </path>
+            </svg>
+          </div>
+          <label class="label mb-1">Dove?</label>
+          <input type="text" class="form-control" placeholder="Cerca destinazione" id="destinationInput"
+            data-bs-toggle="modal" data-bs-target="#destinationModal">
+        </div>
+      
+
+        <!-- Modal for Destination -->
+        <div class="modal fade" id="destinationModal" tabindex="-1" aria-labelledby="destinationModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="destinationModalLabel">Seleziona la tua destinazione</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <h5 class="mb-3 h5-font">I viaggi più amati dai WeRoaders</h5>
+                    <ul class="list-group travel-list">
+                      <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                        <div>
+                        
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12.5" height="14.17" fill="currentColor"
+                            viewBox="0 0 24 24" class="me-2">
+                            <path
+                              d="M12.36,6L12.76,8H18V14H14.64L14.24,12H7V6H12.36M14,4H5V21H7V14H12.6L13,16H20V6H14.4">
+                            </path>
+                          </svg>
+                          <div class="fw-bold">Giordania 360°</div>
+                          <small>8 giorni • A partire da 899 €</small>
+                        </div>
+                        <i class="bi bi-box-arrow-up-right color "></i>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12.5" height="14.17" fill="currentColor"
+                            viewBox="0 0 24 24" class="me-2">
+                            <path
+                              d="M12.36,6L12.76,8H18V14H14.64L14.24,12H7V6H12.36M14,4H5V21H7V14H12.6L13,16H20V6H14.4">
+                            </path>
+                          </svg>
+                          <div class="fw-bold">Cuba 360°: a ritmo di salsa da Havana a Trinidad</div>
+                          <small>12 giorni • A partire da 1.149 €</small>
+                        </div>
+                        <i class="bi bi-box-arrow-up-right color"></i>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12.5" height="14.17" fill="currentColor"
+                            viewBox="0 0 24 24" class="me-2">
+                            <path
+                              d="M12.36,6L12.76,8H18V14H14.64L14.24,12H7V6H12.36M14,4H5V21H7V14H12.6L13,16H20V6H14.4">
+                            </path>
+                          </svg>
+                          <div class="fw-bold">Vietnam 360°:da Hanoi a Ho Chi Minh City</div>
+                          <small>13 giorni • A partire da 1.269 €</small>
+                        </div>
+                        <i class="bi bi-box-arrow-up-right color"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-6">
+                    <h5 class="mb-3 h5-font">Seleziona il continente</h5>
+                    <div class="row text-center scrolling-wrapper ">
+                      <div class="col-4 mb-3">
+                        <button class="btn-2 filter-item w-100 font-continent p-3" >
+                          <img src="https://cdn.weroad.io/common/images/search-areas/asia.svg" alt="Asia"
+                            class="img-fluid mb-2" width="45" height="45" />
+                          Asia
+                           
+                        </button>
+                      </div>
+                      <div class="col-4 mb-3">
+                        <button class="btn-2 filter-item font-continent w-100 p-3">
+                          <img src="https://cdn.weroad.io/common/images/search-areas/europe.svg" alt="Europa"
+                            class="img-fluid mb-2" width="45" height="45" />
+                          Europa
+                        </button>
+                      </div>
+                      <div class="col-4 mb-3">
+                        <button class="btn-2 filter-item font-continent w-100 p-3" >
+                          <img src="https://cdn.weroad.io/common/images/search-areas/america.svg" alt="America"
+                            class="img-fluid mb-2" width="45" height="45" />
+                          America
+                        </button>
+                      </div>
+                      <div class="col-4 mb-3">
+                        <button class="btn-2 filter-item w-100 font-continent p-3" >
+                          <img src="https://cdn.weroad.io/common/images/search-areas/africa.svg" alt="Africa"
+                            class="img-fluid mb-2" width="45" height="45" />
+                          Africa
+                        </button>
+                      </div>
+                      <div class="col-4 mb-3">
+                        <button class="btn-2 filter-item w-100 font-continent p-3" >
+                          <img src="https://cdn.weroad.io/common/images/search-areas/oceania.svg" alt="Oceania"
+                            class="img-fluid mb-2" width="45" height="45" />
+                          Oceania
+                        </button>
+                      </div>
+                      <div class="col-4 mb-3">
+                        <button class="btn-2 filter-item w-100 font-continent p-3" >
+                          <img src="https://cdn.weroad.io/common/images/search-areas/antarctica.svg" alt="Antartide"
+                            class="img-fluid mb-2" width="45" height="45" />
+                          Antartide
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                  <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                </svg>
+                <a href="#" class="footer">Ovunque, l'importante è partire!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-right h-8"></div>
+
+        <!-- Quando? -->
+        <div class="d-flex align-items-center pe-3">
+          <div class="icon me-2">
+            <svg width="35" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M14.25 3.5H13.5V2H12V3.5H6V2H4.5V3.5H3.75C2.9175 3.5 2.2575 4.175 2.2575 5L2.25 15.5C2.25 16.325 2.9175 17 3.75 17H14.25C15.075 17 15.75 16.325 15.75 15.5V5C15.75 4.175 15.075 3.5 14.25 3.5ZM14.25 15.5H3.75V8H14.25V15.5ZM14.25 6.5H3.75V5H14.25V6.5ZM6.75 11H5.25V9.5H6.75V11ZM9.75 11H8.25V9.5H9.75V11ZM12.75 11H11.25V9.5H12.75V11ZM6.75 14H5.25V12.5H6.75V14ZM9.75 14H8.25V12.5H9.75V14ZM12.75 14H11.25V12.5H12.75V14Z">
+              </path>
+            </svg>
+          </div>
+          <label class="label mb-1">Quando?</label>
+          <input type="text" class="form-control" placeholder="In qualsiasi periodo" id="dateInput"
+            data-bs-toggle="modal" data-bs-target="#dateModal">
+        </div>
+
+        <!-- Modal for Date -->
+        <div class="modal fade" id="dateModal" tabindex="-1" aria-labelledby="dateModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="dateModalLabel">Seleziona la tua data</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+                  <button (click)="selectOption('Mesi')" class="btn ">Mesi</button>
+                  <button (click)="selectOption('Periodi')" class="btn ">Periodi</button>
+                </div>
+                <div [ngSwitch]="selectedOption">
+                  <div *ngSwitchCase="'Mesi'">
+                    <nz-calendar [(ngModel)]="date" [(nzMode)]="mode"
+                      (nzPanelChange)="panelChange($event)"></nz-calendar>
+                  </div>
+                  <div *ngSwitchCase="'Periodi'">
+                    <div class="button-container">
+                      <div class="searchbar">
+                        <div class="periodi-container ">
+                          <div class="periodo periodo-img" *ngFor="let periodo of periodi">
+                            <button (click)="getPartenze(periodo.nome)">
+                              <img [src]="periodo.icona">{{ periodo.nome }}
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div *ngSwitchDefault>
+                    <p>Seleziona un'opzione per visualizzare i dettagli.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                  <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                </svg>
+                <a href="#" class="footer">In qualsiasi periodo</a>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-cerca d-flex align-items-center justify-content-center">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

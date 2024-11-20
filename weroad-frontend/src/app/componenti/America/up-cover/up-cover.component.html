@@ -1,0 +1,8 @@
+<div *ngFor="let item of upcover" class="up-cover-container">
+    <img [src]="item.Image" alt="{{item.title}}" class="up-cover-image opacity-100">
+    <div class="up-cover-text">
+      <h1 class="up-cover-text-h1">{{item.title}}</h1>
+      <p class="up-cover-text-p">{{item.subtitle}}</p>
+    </div>
+</div>
+  

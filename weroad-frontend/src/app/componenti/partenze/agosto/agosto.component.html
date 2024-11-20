@@ -1,0 +1,11 @@
+<div class="hero-overlay">
+    <app-navbar class="nav-header"></app-navbar>
+</div>
+<app-hero-partenze [upcover]="dettagliPartenze"></app-hero-partenze>
+<app-intro [upcover]="dettagliPartenze"></app-intro>
+<app-filter (filteredTrips)="onFilteredTrips($event)" [upcover]="dettagliPartenze" ></app-filter>
+<app-table-partenze [trips]="filteredTrips" [upcover]="dettagliPartenze"></app-table-partenze>
+<app-footer></app-footer>
+
+
+

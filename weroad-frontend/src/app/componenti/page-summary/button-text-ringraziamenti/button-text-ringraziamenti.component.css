@@ -1,0 +1,40 @@
+.feedback-container {
+    text-align: center;
+    margin-top: 250px;
+  }
+  
+  .feedback-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .home-button {
+    background-color: #f05454;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .home-button:hover {
+    background-color: #d94343;
+  }
+
+  .spunta-verde {
+    width: 100px;
+    height: 100px;
+    background-color: #00ff00; 
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 20px auto; 
+  }
+ .img-spunta-verde{
+  background-size: 50%;
+  width: 92px;
+  margin-bottom: 13px;
+ } 

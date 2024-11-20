@@ -1,0 +1,57 @@
+.viaggi-scroll {
+  max-height: calc(2 * 80px + 16px);
+  overflow-y: scroll;
+}
+
+.viaggi-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.viaggi-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.viaggio-container {
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 8px;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.viaggio-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-right: 8px;
+  margin-top: -24px;
+}
+
+.viaggio-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.viaggio-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.viaggio-prezzo {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: -17px;
+}
+
+.totale-carrello {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 16px;
+}
+

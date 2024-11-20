@@ -1,0 +1,97 @@
+.up-cover-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .up-cover-image {
+    width: 100%;
+    height: 2560px;
+    display: block;
+    max-height: 700px;
+    object-fit: cover;
+    filter: brightness(70%);
+
+  }
+  
+  .up-cover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  .up-cover-text-h1 {
+    font-size: 48px;
+    line-height: 53px;
+    font-family: 'Gilroy' ,sans-serif;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    font-style: normal;
+    color: rgb(255,255,255);
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  .up-cover-text-p {
+    font-size: 24px;
+    top: 50%;
+    line-height: 31px;
+    font-family: "Raleway", sans-serif;
+    color: rgb(255,255,255);
+    margin: 0;
+    line-height: 1.2;
+    font-style: normal;
+
+  }
+
+  
+  @media (max-width: 768px) {
+    .up-cover-image {
+      height: 559.19px;
+      max-height: 700px;
+      object-fit: cover;
+    }
+  
+    .up-cover-text {
+      top: 50%;
+    }
+  
+    .up-cover-text h1 {
+      font-size: 36px;
+      line-height: 40px;
+      margin: 0 0 10px 0;
+      font-weight: bold;
+    }
+  
+    .up-cover-text p {
+  
+      margin-top: 20px;
+    }
+
+    .title{
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      color: rgb(255,255,255);
+      line-height: 40px;
+      font-family: 'Gilroy' ,sans-serif;
+
+      
+    }
+    .paragrafo{
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      color: rgb(255,255,255);
+      line-height: 26px;
+      font-family: "Raleway", sans-serif;
+  
+    }
+  }
+  
+  
+  

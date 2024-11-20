@@ -1,0 +1,35 @@
+<div class="coordinatori-container">
+  <div *ngFor="let coordinator of paginatedTurns" class="coordinator-card">
+    <img
+      [src]="coordinator.Image"
+      alt="{{ coordinator.nameSurname }}"
+      class="coordinator-image"
+    />
+    <div class="coordinator-info">
+      <h3 class="coordinator-name">{{ coordinator.nameSurname }}</h3>
+      <p class="coordinator-residence">
+        <i class="bi bi-house-door-fill"></i> Vive a {{ coordinator.residence }}
+      </p>
+      <div class="social-icons">
+
+        <a href="" class="social-link" *ngIf="coordinator.fb">
+          <i class="bi bi-facebook"></i>
+        </a>
+
+        <a href="#" class="social-link" *ngIf="coordinator.ig"> 
+            <i class="bi bi-instagram"></i> 
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pagination-controls">
+    <button (click)="previousPage()" [disabled]="currentPage === 1">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <span class="coordinator-residence">Pagina <strong>{{ currentPage }}</strong> di <strong>{{ totalPages }}</strong></span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>

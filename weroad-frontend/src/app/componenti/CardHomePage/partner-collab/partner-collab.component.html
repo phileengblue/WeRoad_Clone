@@ -1,0 +1,8 @@
+<div class="partner-section">
+    <h2 class="partner-section-h2">{{ partnerSection[0].title }}</h2>
+    <p class="partner-section-p ">{{ partnerSection[0].p }}</p>
+    <div class="logos-container">
+      <img *ngFor="let logo of partnerLogos" [src]="logo" alt="Partner Logo" class="partner-logo"/>
+    </div>
+  </div>
+  

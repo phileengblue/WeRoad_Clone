@@ -1,0 +1,25 @@
+<div class="center-wrapper">
+    <div class="first-departure">
+        <div class="d-flex">
+            <div class="d-flex me-3">
+                <img src="../../assets/trip-details/icons/calendar.png" alt="calendar-img" class="calendar-img me-2">
+                <p class="header-text-color me-3">Prima partenza {{trip.start_date}}</p>
+            </div>
+            <div class="d-flex">
+                <img src="../../assets/trip-details/icons/day-and-night.png" alt="day-night-img"
+                    class="day-night-img me-2">
+                <p class="header-text-color">{{trip.duration}} giorni - {{trip.duration - 1}} notti</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between space-price mt-2">
+            <div class="d-flex flex-column">
+                <p class="text-uppercase first-departure-color">a partire da</p>
+                <div class="d-flex align-items-baseline">
+                    <p class="fw-bold first-departure-price-color">{{trip.price}}</p>
+                    <p class="first-departure-color fs-6 ms-1">€</p>
+                </div>
+            </div>
+            <button class="first-departure-button">Vedi calendario partenze</button>
+        </div>
+    </div>
+</div>

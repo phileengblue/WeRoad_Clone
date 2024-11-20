@@ -1,0 +1,16 @@
+<div class="down-cover" *ngFor="let cover of downcover">
+    
+    <div class="cover-content desktop" *ngIf="!isMobileView">
+      <h2 class="citation">{{ cover.Citation }}</h2>
+      <h3 class="author">{{ cover.Author }}</h3>
+      <p class="description">{{ cover.p }}</p>
+    </div>
+    
+    <div class="cover-content mobile" *ngIf="isMobileView">
+      <h2 class="citation">{{ cover.Citation }}</h2>
+      <h3 class="author">{{ cover.Author }}</h3>
+      <p class="description">{{ cover.p }}</p>
+    </div>
+    
+    <img class="cover-image" [src]="cover.Image" alt="Cover Image">
+  </div>

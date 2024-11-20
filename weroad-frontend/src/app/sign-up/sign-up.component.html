@@ -1,0 +1,150 @@
+<!--header-->
+<div class="header-container mb-4">
+    <img src="../../assets/login-img/weroad.svg" alt="weroad-icon" class="ms-3 my-2 weroad-icon">
+</div>
+
+<form [formGroup]="signupForm" (ngSubmit)="handleSubmit()" class="mx-3 d-flex flex-column align-items-center">
+
+    <!--Titolo-->
+    <h1 class="text-uppercase text-center fw-bold mb-5 my-lg-5">Crea un nuovo account utente</h1>
+
+    <!--Sottotiolo-->
+    <h5 class="text-uppercase text-center submit-size">informazioni personali</h5> 
+
+    <!--line-->
+    <div class="d-flex justify-content-center mb-1">
+        <div class="divider"></div>
+    </div>
+    
+    <!--Nome-->
+    <div class="row col-12 col-md-9 col-lg-6">
+        <div class="mb-lg-3 mb-2">
+            <label class="form-label fw-light">Nome</label>
+            <input type="text" class="form-control rounded-0" formControlName="firstname">
+        </div>
+    </div>
+
+    <!--Cognome-->
+    <div class="row col-12 col-md-9 col-lg-6">
+        <div class="mb-lg-3 mb-2">
+            <label class="form-label fw-light">Cognome</label>
+            <input type="text" class="form-control rounded-0" formControlName="lastname">
+        </div>
+    </div>
+
+    <!-- Sesso, Data di nascita e Numero di telefono -->
+    <div class="row col-12 col-md-9 col-lg-6 mb-5">
+        <!--Sesso-->
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <label class="form-label fw-light">Sesso</label>
+            <select class="form-control rounded-0" formControlName="gender">
+                <option>male</option>
+                <option>female</option>
+                <option>other</option>
+            </select>
+        </div>
+
+        <!--Data di nascita-->
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <label class="form-label fw-light">Data di nascita</label>
+            <input type="date" class="form-control rounded-0" formControlName="birth_date">
+        </div>
+
+        <!--Numero di telefono-->
+        <div class="col-12 col-md-4">
+            <label class="form-label fw-light">Numero di telefono</label>
+            <input type="tel" class="form-control rounded-0" formControlName="phone_number">
+        </div> 
+    </div>
+
+    <!--Sottotiolo-->
+    <h5 class="text-uppercase text-center submit-size mt-md-3">informazioni di accesso</h5> 
+
+    <!--line-->
+    <div class="d-flex justify-content-center mb-1">
+        <div class="divider"></div>
+    </div>
+
+    <!--E-mail-->
+    <div class="row col-12 col-md-9 col-lg-6">
+        <div class="mb-lg-3 mb-2">
+            <label class="form-label fw-light">E-mail</label>
+            <input type="email" class="form-control rounded-0" formControlName="email">
+        </div>
+    </div>
+
+    <!--Password-->
+    <div class="row col-12 col-md-9 col-lg-6">
+        <div class="mb-lg-3 mb-2">
+            <label class="form-label fw-light">Password</label>
+        <input type="password" class="form-control rounded-0" formControlName="password">
+        </div>
+    </div>
+
+    <!--Check-->
+    <div class="my-3 form-check d-flex align-items-lg-center align-content-lg-between row col-12 col-md-9 col-lg-6">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label fs-check fw-light px-1" for="exampleCheck1">Ho letto e accetto la Privacy Policy e la Cookie Policy</label>
+    </div>
+
+    <!--Submit-->
+    <button type="submit" class="btn btn-outline-light text-uppercase btn-custom mt-3 fw-semibold rounded-0 rpw col-12 col-md-9 col-lg-6">Crea un account</button>
+
+</form>
+
+
+
+
+
+<!-- <form class="custom-size">
+    <div class="d-flex gap-2"> -->
+
+        <!--Sesso-->
+        <!-- <div class="mb-3 col-2">
+            <label class="form-label fw-light">Sesso</label>
+            <select class="form-control rounded-0">
+                <option>M</option>
+                <option>F</option>
+                <option>Altro</option>
+            </select>
+        </div> -->
+    
+        <!--Data di nascita-->
+        <!-- <div class="mb-3 col-4">
+            <label class="form-label fw-light">Data di nascita</label>
+            <input type="date" class="form-control rounded-0">
+        </div> -->
+    
+        <!--Numero di telefono-->
+        <!-- <div class="mb-5 col-5 input-number">
+            <label class="form-label fw-light">Numero di telefono</label>
+            <input type="tel" class="form-control rounded-0">
+        </div> -->
+    <!-- </div>
+    <h5 class="text-uppercase fs-5 text-center fs-6 fw-medium">informazioni di accesso</h5> -->
+    <!--line-->
+    <!-- <div class="d-flex justify-content-center mb-1">
+        <div class="divider"></div>
+    </div> -->
+
+    <!--Email-->
+    <!-- <div class="mb-3">
+        <label class="form-label fw-light">Email</label>
+        <input type="email" class="form-control rounded-0">
+    </div> -->
+
+    <!--Password-->
+    <!-- <div class="mb-3">
+        <label class="form-label fw-light">Password</label>
+        <input type="password" class="form-control rounded-0">
+    </div> -->
+
+    <!--Check-->
+    <!-- <div class="mb-3 form-check d-flex align-items-lg-center align-content-lg-between">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label fs-check fw-light px-1" for="exampleCheck1">Ho letto e accetto la Privacy Policy e la Cookie Policy</label>
+    </div> -->
+
+    <!--Submit-->
+    <!-- <button type="submit" class="btn btn-outline-light text-uppercase btn-custom mt-3 fw-semibold rounded-0">Crea un account</button>
+</form> -->

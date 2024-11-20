@@ -1,0 +1,84 @@
+.summary-container {
+    width: 60%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 1rem;
+    text-align: left; 
+}
+
+p, ul {
+    font-size: 1rem;
+    color: #555555;
+    text-align: left; 
+    margin-left: 1.5rem;
+}
+
+ul.list-unstyled {
+    padding-left: 1.5rem;
+    list-style-type: none;
+    margin-top: 0.5rem;
+}
+
+ul.list-unstyled li::before {
+    content: "- ";
+    color: #555555;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-success {
+    background-color: #dc3545; 
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+}
+
+.summary-title {
+    font-size: 1rem;
+    color: #333333;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.nz-steps {
+    margin-top: 30px;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}

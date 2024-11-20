@@ -1,0 +1,300 @@
+
+
+
+.coordinatori-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    border: none;
+    /*margin-left: 450px;
+    max-width:1068px ;
+    max-height: 1068px;*/
+  }
+  
+  .coordinator-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    transition: box-shadow 0.3s;
+    border: none;
+    
+  }
+  
+  .coordinator-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .coordinator-info {
+    flex: 1;
+  }
+  
+  .coordinator-name {
+font-family: "Raleway", sans-serif;     font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .coordinator-residence {
+font-family: "Raleway", sans-serif;     font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    color: #666;
+  }
+  
+  .social-link {
+    display: inline-block;
+    color: #666;
+  }
+  
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 16px;
+    color: #343a40;
+  }
+  
+  .pagination-controls span {
+    margin: 0 10px;
+  }
+  
+  .pagination-controls select {
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #343a40;
+    font-size: 16px;
+    padding: 5px 40px 5px 10px;
+    cursor: pointer;
+    appearance: none;
+    margin: 0 10px;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3E%3Cpath fill="%23007bff" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"%3E%3C/path%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    transition: border-color 0.3s;
+  }
+  
+  .pagination-controls select:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  }
+  
+  .pagination-controls button {
+    border: 1px solid #6c757d;
+    background-color: #e9ecef;
+    color: #343a40;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .pagination-controls button:disabled {
+    background-color: #d6d8db;
+    color: #6c757d;
+    cursor: not-allowed;
+    border-color: #c6c8ca;
+  }
+  
+  .pagination-controls button:hover:not(:disabled) {
+    background-color: #dee2e6;
+    border-color: #adb5bd;
+  }
+  
+  .pagination-controls button i {
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .coordinatori-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      
+    }
+  
+    .coordinator-card {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      
+    }
+  
+    .coordinator-image {
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100px;
+      height: 100px;
+    }
+  
+    .coordinator-name {
+      font-size: 14px;
+      text-align: center;
+    }
+  
+    .coordinator-residence {
+      font-size: 12px;
+      text-align: center;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .coordinatori-container {
+      grid-template-columns: 1fr;
+    }  
+    .coordinator-card {
+      padding: 10px;
+    }
+  }
+
+@media (min-width: 769px) {
+  .coordinatori-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; 
+    padding: 0 20px;
+    max-width: 1100px;
+    margin: 60px auto;
+  }
+
+  .coordinator-card {
+    display: flex;
+    align-items: flex-start; 
+    padding: 0; 
+    border: none; 
+  }
+
+  .coordinator-image {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px; 
+  }
+
+  .coordinator-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .coordinator-name {
+font-family: "Raleway", sans-serif;        font-size: 18px; 
+    font-weight: 700; 
+    margin: 0;
+  }
+
+  .coordinator-residence {
+font-family: "Raleway", sans-serif;        font-size: 15px;
+    color: #555;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .coordinator-residence i {
+    margin-right: 6px; 
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 15px; 
+    color: #666;
+    margin-top: 5px;
+  }
+
+  .social-link {
+    color: #666;
+    font-size: 20px; 
+  }
+
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 16px;
+    color: #6c757d;
+  }
+  
+  .pagination-controls span {
+    margin: 0 15px;
+    font-size: 16px;
+    color: #6c757d;
+    letter-spacing: 1px;
+  }
+  
+  .pagination-controls button {
+    border: 1px solid #c0c0c0;
+    background-color: #f5f5f5;
+    color: #6c757d;
+    padding: 6px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .pagination-controls button i {
+    font-size: 12px;
+  }
+  
+  .pagination-controls button:hover:not(:disabled) {
+    background-color: #e0e0e0;
+    border-color: #b0b0b0;
+  }
+  
+  .pagination-controls button:disabled {
+    background-color: #d3d3d3;
+    color: #a0a0a0;
+    cursor: not-allowed;
+    border-color: #c0c0c0;
+  }
+  
+  .pagination-controls button:not(:disabled):hover {
+    background-color: #e0e0e0;
+  }
+  
+  
+
+}
+
+  
+  

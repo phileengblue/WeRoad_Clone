@@ -1,0 +1,25 @@
+<!-- Griglia -->
+<div class="d-flex justify-content-center">
+  <div class="grid-container">
+    <div *ngFor="let card of getGridImages(); let i = index" class="grid-item" [ngClass]="'item' + (i + 1)">
+      <img 
+        [src]="card.image" 
+        alt="trip-details-img" 
+        class="img-fluid" 
+        (click)="openImageModal(i)">
+    </div>
+  </div>
+</div>
+<p *ngIf="card.length > 6" class="fw-lighter grid-text-fs text-center grid-text-position">
+  + <b class="fw-bold fs-5">{{ card.length - 6 }}</b><br>foto da questo viaggio
+</p>
+
+<!-- Modale -->
+<div *ngIf="isModalOpen" class="modal-overlay" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="closeModal()">&times;</button>
+    <button class="nav-btn prev" (click)="prevImage()">&lt;</button>
+    <img [src]="getCurrentImage()" alt="modal-img" class="img-fluid">
+    <button class="nav-btn next" (click)="nextImage()">&gt;</button>
+  </div>
+</div>

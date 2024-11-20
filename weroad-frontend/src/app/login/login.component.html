@@ -1,0 +1,95 @@
+<!--header-->
+<div class="header-container mb-5">
+    <img src="../../assets/login-img/weroad.svg" alt="weroad-icon" class="ms-3 my-2 weroad-icon">
+</div>
+
+<div *ngIf="!forgotPassword"  class="d-flex justify-content-center">
+    <div class="form-size">
+        <!--Titolo-->
+        <h1 class="text-center mb-3">Log in to WeRoad</h1>
+        <!--Sottotiolo-->
+        <p class="text-center mb-4">Manage the coolest site in the world</p>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <!--Email-->
+        <div class="d-flex justify-content-center mb-3">
+            <img src="../../assets/login-img/user.png" alt="user-img" class="input-img">
+            <input type="email" placeholder="Email" class="custom-input" required formControlName="email">
+        </div>
+
+        <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="alert">inserisci una email</div>
+
+        <!--Password-->
+        <div class="d-flex justify-content-center">
+            <img src="../../assets/login-img/secured-lock.png" alt="secure-lock-img" class="input-img">
+            <input type="password" placeholder="Password" class="custom-input" required formControlName="password">
+        </div>
+
+        <!--Recupero password-->
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            <a (click)="toggleForgotPassword()" class="text-decoration-none forgot-psw-color">Forgot your password?</a>
+            <img src="../../assets/login-img/key.png" alt="key-img" class="button-img">
+        <!--Invio-->
+            <button class="forgot-psw-btn">Submit</button>
+        </div>
+        </form>
+        
+        <!--Line-->
+        <div class="d-flex justify-content-center align-items-center mt-4">
+            <div class="line"></div><div class="p-2 custom-line-fs">OR</div><div class="line"></div>
+        </div>
+
+        <!--Login con magic link-->
+        <div class="d-flex">
+            <img src="../../assets/login-img/link.png" class="link-img" alt="link-img">
+            <button class="form-btn btn-magic-link mt-4 fw-light">Login with a magic link</button>
+        </div>
+        <!--Login con Google-->
+        <div class="d-flex">
+            <img src="../../assets/login-img/google.png" class="google-img" alt="google-img">
+            <button class="form-btn btn-google-link mt-3 fw-light">Login with Google</button>
+        </div>
+    </div> 
+</div>
+
+
+
+<!--PAGINA DI RECUPERO PASSWORD-->
+<div *ngIf="forgotPassword" class="d-flex flex-column align-items-center">
+    <div class="form-size">
+        <!--Titolo-->
+        <h1 class="text-center mb-3">Log in to WeRoad</h1>
+        <!--Sottotiolo-->
+        <p class="text-center mb-4">Manage the coolest site in the world</p>
+        <p class="p-forgot-psw">Forgot your password? Type in your email address in the form below to reset your password.</p>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <!--Email-->
+        <div class="d-flex justify-content-center mb-3">
+            <img src="../../assets/login-img/user.png" alt="user-img" class="input-img">
+            <input type="email" placeholder="Email" class="custom-input" required formControlName="email">
+        </div>
+
+        <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="alert">inserisci una email</div>
+
+        <!--Ritorna alla login-->
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            <a (click)="toggleForgotPassword()" class="text-decoration-none forgot-psw-color">Return to login</a>
+            <img src="../../assets/login-img/right-arrow.png" alt="key-img" class="button-img">
+        <!--Invio-->
+            <button class="forgot-psw-btn">Submit</button>
+        </div>
+        </form>
+    </div>
+</div>
+
+<!--nuvole-->
+<div class="clouds"></div>
+
+<!--aereo-->
+<div class="plane"></div>
+
+<!--sfondo-->
+<img src="../../assets/login-img/mountain.jpg" alt="mountain-img" class="mountain-size">
+
+

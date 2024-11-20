@@ -1,0 +1,56 @@
+.first-departure {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: -19px;
+    z-index: 1;
+    position: relative;
+    width: 1160px;
+    height: 86px;
+}
+.center-wrapper {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+.first-departure .calendar-img,
+.first-departure .day-night-img {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+.first-departure p {
+    margin: 0;
+    font-size: 16px;
+    color: #4D4D4D;
+}
+
+.first-departure-price {
+    font-size: 24px;
+    color: #FF4859;
+    font-weight: bold;
+}
+
+.first-departure-button {
+    background-color: #FF4859;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.first-departure-button:hover {
+    background-color: #f51f47;
+}
+
+.space-price{
+    gap: 17px
+}

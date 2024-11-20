@@ -1,0 +1,16 @@
+<div *ngFor="let item of desc" class="desc-container">
+    <div class="desc-text">
+      <h1 class="desc-text-h1">I nostri viaggi di gruppo {{item.title}}</h1>
+      <p class="desc-text-p2">{{item.p}}</p>
+      <div class="button-container">
+        <a class="btn btn-danger flex-grow-1 ms-1"(click)="scrollTo('Giappone')">{{item.button1}}</a>
+        <a class="btn btn-danger flex-grow-1 ms-1"(click)="scrollTo('India')">{{item.button2}}</a>
+        <a class="btn btn-danger flex-grow-1 ms-1"(click)="scrollTo('Nepal')">{{item.button3}}</a>
+        <a class="btn btn-danger flex-grow-1 ms-1"(click)="scrollTo('Sri Lanka')">{{item.button4}}</a>
+        <a class="btn btn-danger flex-grow-1 ms-1"(click)="scrollTo('Uzbekistan')">{{item.button5}}</a>
+        <a class="btn btn-danger flex-grow-1 ms-1"(click)="scrollTo('Corea del Sud')">{{item.button6}}</a>
+        <a class="btn btn-danger flex-grow-1 ms-1"(click)="scrollTo('Cina')">{{item.button7}}</a>
+        <a class="btn btn-danger flex-grow-1 ms-1"(click)="scrollTo('Maldive')">{{item.button8}}</a>
+      </div>
+    </div>
+</div>

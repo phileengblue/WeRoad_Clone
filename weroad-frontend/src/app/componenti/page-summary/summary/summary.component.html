@@ -1,0 +1,30 @@
+<div class="summary-container mt-5">
+    <h3 class="text-center mb-4">Riepilogo delle Risposte</h3>
+    <div *ngFor="let question of questions; let i = index" class="mb-4">
+        <h5 class="fw-bold">{{ i + 1 }} - {{ question.label }}</h5>
+
+        <ng-container [ngSwitch]="question.type">
+            <div *ngSwitchCase="'radio'">
+                <p class="ms-3">
+                    <span *ngIf="answers[i] !== 'Altro'">{{ answers[i] }}</span>
+                    <span *ngIf="answers[i]?.option === 'Altro'">Altro: {{ answers[i].value }}</span>
+                </p>
+            </div>
+
+            <div *ngSwitchCase="'slider'">
+                <p class="ms-3">Valutazione: {{ answers[i] }}</p>
+            </div>
+
+            <div *ngSwitchCase="'checkbox'">
+                <ul class="list-unstyled ms-3">
+                    <li *ngFor="let option of answers[i]">{{ option }}</li>
+                </ul>
+            </div>
+        </ng-container>
+    </div>
+
+    <div class="button-container">
+        <button type="button" class="btn btn-secondary" (click)="goToPreviousStep()">Indietro</button>
+        <button nz-button nzType="primary" class="btn btn-success" (click)="completeFeedback()">Conferma</button>
+    </div>
+</div>

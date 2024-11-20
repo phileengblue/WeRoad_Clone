@@ -1,0 +1,180 @@
+<!--Viaggio in pillole-->
+<div class="container-fluid">
+
+
+    <div class="row  m-5">
+        <div class="col-7 custom-paragraph-margin-left">
+            <!--SX-->
+            <div class="sticky-paragraph">
+                <h3 class="fw-bold paragraph-title mb-4">Il viaggio in pillole</h3>
+                <p class="fw-light mb-4">{{trip.description.description_header}}</p>
+
+                <div class="row mb-5">
+                    <div class="col-6">
+                        <h6 class="fw-semibold paragraph-title mb-3 custom-title-paragraph-fs">Mood di viaggio</h6>
+                        <p class="fw-light">{{trip.description.description1}}
+                        </p>
+                    </div>
+
+                    <div class="col-6">
+                        <h6 class="fw-semibold paragraph-title mb-3 custom-title-paragraph-fs">Impegno fisico</h6>
+                        <p class="fw-light">{{trip.description.description2}}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <h6 class="fw-semibold paragraph-title mb-3 custom-title-paragraph-fs">Cosa fare per andarci?</h6>
+                        <p>{{trip.description.description3}}</p>
+                        <p>Prima di prenotare ricorda di controllare eventuali aggiornamenti su <a
+                                href="https://www.viaggiaresicuri.it/find-country/country/MAR"
+                                class="text-decoration-none fw-bold link-color">Viaggiare Sicuri.</a></p>
+                    </div>
+
+                    <div class="col-6">
+                        <h6 class="fw-semibold paragraph-title mb-3 custom-title-paragraph-fs">Ritrovo e saluti</h6>
+                        <p>{{trip.description.description4}}
+                        </p>
+                        <a href="https://www.viaggiaresicuri.it/find-country/country/MAR"
+                            class="fw-medium link-color">Scopri di più sul ritrovo qui!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--DX-->
+        <div class="col-4 right-card ms-3">
+            <div class="ms-2 d-flex flex-column align-items-center things-included-container">
+                <h6 class="fw-semibold paragraph-title mb-2 mt-4">Marocco {{trip.duration}} giorni</h6>
+                <h6 class="fw-semibold paragraph-title mb-3">Prossima partenza il {{trip.start_date}}</h6>
+                <h6 class="text-uppercase first-departure-color">a partire da</h6>
+                <h2 class=" fw-bold first-departure-price-color fs-2">{{trip.price}} €</h2>
+                <p class="first-departure-color text-center">Acconto a partire da 100 €<br>
+                    Saldo a partire da 839 €</p>
+                <div class="d-flex justify-content-center align-items-center">
+                    <button class="link-color me-2 link-details-fs m-0 border-0 bg-transparent" (click)="toggleShow()">
+                        {{ show ? 'Vedi i dettagli' : 'Vedi i dettagli' }}
+                        <img src="../../assets/trip-details/icons/arrow-down-sign-to-navigate.png" alt="arrow-down"
+                            class="arrow-icon-size">
+                    </button>
+                </div>
+
+                <p *ngIf="show" class="first-departure-color text-center mx-3">La disponibilità dell'opzione 'prenota
+                    pagando un acconto', varia da turno a turno, in base al numero di giorni che mancano alla data di
+                    partenza selezionata.</p>
+                <div class="d-flex align-content-center">
+                    <p class="first-departure-color me-2">o 3 o 4 rate senza interessi. </p>
+                    <img src="../../assets/trip-details/icons/scalapay.png" alt="scalapay-img" class="scalapay-img">
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center mb-4">
+                    <img src="../../assets/trip-details/icons/plane-2.png" alt="plane-icon"
+                        class="plane-icon-size me-2">
+                    <a href="" class="text-decoration-none link-color link-details-fs">Cerca volo</a>
+                </div>
+
+                <!--Linea-->
+                <div class="card-line"></div>
+            </div>
+
+            <!--Cosa è incluso-->
+            <div class="d-flex flex-column ms-2 my-3 gap-4 things-included-container">
+                <h3 class="fw-bold paragraph-title mb-2">Cosa è incluso</h3>
+                <!--1-->
+                <div class="d-flex">
+                    <img src="../../assets/trip-details/things-included-icons/bed.png" alt="bed-img"
+                        class="icons-things-included-size me-4">
+                    <p class="text-color m-0 fw-light">{{trip.duration -1 }} notti in camera multipla</p>
+                </div>
+
+                <!--2-->
+                <div class="d-flex align-items-center">
+                    <img src="../../assets/trip-details/things-included-icons/coffee.png" alt="coffee-img"
+                        class="icons-things-included-size me-4">
+                    <p class="text-color m-0 fw-light"> Tutte le colazioni </p>
+                </div>
+
+                <!--3-->
+                <div class="d-flex align-items-center">
+                    <img src="../../assets/trip-details/things-included-icons/bus.png" alt="bus-img"
+                        class="icons-things-included-size me-4">
+                    <p class="text-color m-0 fw-light"> Minivan con conducente dal giorno 2 al giorno 7 </p>
+                </div>
+
+                <!--4-->
+                <div class="d-flex align-items-center">
+                    <img src="../../assets/trip-details/things-included-icons/guide.png" alt="guide-img"
+                        class="icons-things-included-size me-4">
+                    <p class="text-color m-0 fw-light"> Guida locale a disposizione del gruppo dal giorno 2 al giorno 7
+                    </p>
+                </div>
+
+                <!--5-->
+                <div class="d-flex align-items-center">
+                    <img src="../../assets/trip-details/things-included-icons/world.png" alt="world-img"
+                        class="icons-things-included-size me-4">
+                    <p class="text-color m-0 fw-light"> Passeggiata al tramonto e all'alba a dorso di un cammello </p>
+                </div>
+
+                <!--6-->
+                <div class="d-flex align-items-center">
+                    <img src="../../assets/trip-details/things-included-icons/awning.png" alt="awning-img"
+                        class="icons-things-included-size me-4">
+                    <p class="text-color m-0 fw-light"> "Local Experience": una notte indimenticabile in un tipico campo
+                        tendato nel deserto di Merzouga con cena beduina </p>
+                </div>
+
+                <!--7-->
+                <div class="d-flex align-items-center">
+                    <img src="../../assets/trip-details/things-included-icons/wow.png" alt="wow-img"
+                        class="icons-things-included-size me-4">
+                    <p class="text-color m-0 fw-light"> Escursione in quad sulle dune della spiaggia di Essaouira con
+                        pic-nic</p>
+                </div>
+
+                <!--8-->
+                <div class="d-flex align-items-center">
+                    <img src="../../assets/trip-details/things-included-icons/guide.png" alt="guide-img"
+                        class="icons-things-included-size me-4">
+                    <p class="text-color m-0 fw-light"> Visita guidata della medina di Marrakech </p>
+                </div>
+
+                <!--9-->
+                <div class="d-flex align-items-center">
+                    <img src="../../assets/trip-details/things-included-icons/assistance.png" alt="assistance-img"
+                        class="icons-things-included-size me-4">
+                    <p class="text-color m-0 fw-light"> L’assistenza del coordinatore </p>
+                </div>
+
+                <!--10-->
+                <div class="d-flex align-items-center">
+                    <img src="../../assets/trip-details/things-included-icons/money.png" alt="money-img"
+                        class="icons-things-included-size me-4">
+                    <p class="text-color m-0 fw-light"> Cancellazione gratuita con rimborso 100% fino a 31 giorni prima
+                        della partenza </p>
+                </div>
+
+                <!--11-->
+                <div class="d-flex align-items-center">
+                    <img src="../../assets/trip-details/things-included-icons/insurance.png" alt="insurance-img"
+                        class="icons-things-included-size me-4">
+                    <a class="text-color m-0 fw-light"> L’assicurazione medico-bagaglio (a partire da: €1.000 Italia -
+                        €20.000 Europa - €30.000 Mondo)</a>
+                </div>
+            </div>
+
+            <!--Linea-->
+            <div class="card-line"></div>
+
+            <!--Bottone cassa comune-->
+            <div class="d-flex justify-content-center">
+                <button class="card-button my-4">Cassa comune? <br> Clicca qui</button>
+            </div>
+
+        </div>
+
+        <!--Doamnde frequenti-->
+        <div class="d-flex justify-content-end">
+            <a href="" class="text-decoration-none link-color mt-4 questions-me-custom"> Domande frequenti </a>
+        </div>
+    </div>

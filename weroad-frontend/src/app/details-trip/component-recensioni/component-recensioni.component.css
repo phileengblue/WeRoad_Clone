@@ -1,0 +1,80 @@
+/*Rating*/
+.stars-overlay {
+    position: absolute;
+    transform: translateX(145%) translateY(40%);
+    background: #00a76f;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+}
+ 
+:host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-first {
+    color: #ffffff;
+}
+ 
+:host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-second {
+    color: #00a76f;
+}
+ 
+:host ::ng-deep .ant-rate-star-full .ant-rate-star-second,
+:host ::ng-deep .ant-rate-star-half .ant-rate-star-second {
+    color: #ffffff;
+}
+ 
+:host ::ng-deep .ant-rate-star-first {
+    color: #00a76f;
+}
+ 
+:host ::ng-deep .ant-rate-star.ant-rate-star-zero .ant-rate-star-second {
+    color: #787878;
+}
+ 
+:host ::ng-deep .ant-rate-star {
+    font-size: 16px;
+    margin-right: 2px;
+}
+ 
+:host ::ng-deep .ant-rate {
+    display: flex;
+    align-items: center;
+}
+ 
+:host ::ng-deep .ant-rate-star {
+    margin-left: 5px;
+    font-size: 8px;
+    color: #ffffff;
+}
+
+ /*RECENSIONI*/
+ .reviews-card{
+    height: 367px;
+    width: 1158px;
+    border: 1px solid #DFDFDF;
+    border-radius: 16px;
+}
+
+/*Rating*/
+.stars-overlay-reviews {
+    background: #00a76f;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    width: 80px;
+}
+
+.green-star-size{
+    height: 20px;
+    width: 20px;
+}
+
+.reviews-text{
+    font-size: 14px;
+}
+.reviews-date{
+    color: #999999;
+    font-size: 14px;
+}
+
+.custom-ms-reviews{
+    margin-left: 285px;
+}

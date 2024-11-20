@@ -1,0 +1,30 @@
+<div *ngIf="!isMobileView; else mobileView" class="desktop-view">
+    <div class="card-container">
+      <div *ngFor="let card of cardDestEu; let i = index" class="card" [ngClass]="{'alternate': i % 2 === 1}">
+        <div class="card-img-container">
+          <img [src]="card.Image" [alt]="card.Country_name" class="card-img">
+        </div>
+        <div class="card-content">
+          <h3 class="card-content-h3">{{ card.Country_name }}</h3>
+          <p class="card-content-p">{{ card.p }}</p>
+          <button class="card-button" (click)="navigate(card.src)">{{ card.button }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #mobileView>
+    <div class="card-container">
+      <div *ngFor="let card of cardDestEu" class="card">
+        <img [src]="card.Image" [alt]="card.Country_name" class="card-img">
+        <div class="card-content">
+          <h3 class="card-content-h3">{{ card.Country_name }}</h3>
+          <p class="card-content-p">{{ card.p }}</p>
+          <button class="card-button" (click)="navigate(card.src)">{{ card.button }}</button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  
+  
+  

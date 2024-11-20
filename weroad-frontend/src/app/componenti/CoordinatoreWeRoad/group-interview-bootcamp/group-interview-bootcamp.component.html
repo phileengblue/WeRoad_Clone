@@ -1,0 +1,31 @@
+<div class="container">
+  <div *ngFor="let group of grIn" class="section">
+    <h2>{{ group.title }}</h2>
+    <div *ngFor="let box of grInBox" class="box">
+      <div class="icon-text">
+        <i class="bi bi-calendar-range"></i>
+        <span class="announce">{{ box.announce }}</span>
+      </div>
+      <div class="box-content">
+        <h3>{{ box.title }}</h3>
+        <p>{{ box.p }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngFor="let bootcamp of btCmp" class="section">
+    <h2>{{ bootcamp.title }}</h2>
+    <div *ngFor="let box of btCmpBox" class="box">
+      <div class="icon-text">
+        <i class="bi bi-calendar-range"></i>
+        <span class="announce">{{ box.announce }}</span>
+      </div>
+      <div class="box-content">
+        <h3>{{ box.title }}</h3>
+        <p>{{ box.p }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  

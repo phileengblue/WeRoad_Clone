@@ -1,0 +1,46 @@
+
+.total-container{
+  padding: 40px;
+  background-color: #eff2f4;
+ }
+
+.desc-container {
+text-align: center;
+padding: 0 357px;
+margin-top: 30px;
+margin-bottom: 30px;
+
+}
+
+.desc-text-h1 {
+font-family: 'Gilroy', sans-serif;
+font-weight: bold;
+font-size: 36px;
+margin-bottom: 10px;
+}
+
+.desc-text-p1 {
+font-family: "Raleway", sans-serif;font-size: 16px;
+margin-bottom: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+.desc-container {
+  padding: inherit;
+}
+.desc-text-h1 {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.desc-text-p1 {
+  font-family: "Raleway", sans-serif;  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+
+}

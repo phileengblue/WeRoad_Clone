@@ -1,0 +1,113 @@
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  border: 0px solid #f0f0f0;
+  border-radius: 0px solid #f0f0f0;
+  box-shadow: 0px solid #f0f0f0;
+  margin-left: 290px;
+  margin-bottom: 80px;
+  max-width: 1368px;
+  max-height: 1368px;
+}
+
+.card {
+  flex: 1;
+  max-width: calc(33.33% - 20px);
+  border-radius: 0px solid #f0f0f0;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0px solid #f0f0f0;
+  background-color: white;
+  border:none;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 20px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.card-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  margin: 10px 15px 5px 15px;
+  font-weight: bold;
+  color: #080808;
+}
+
+.card-text {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  margin: 0 15px 15px 15px;
+  color: #4e4d4d;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 20px;
+}
+
+.carousel-item {
+  min-width: 80%;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  scroll-snap-align: start;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+@media (max-width: 768px) {
+  
+  .scrolling-wrapper {
+      display: flex;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      margin-left:20px;
+  }
+
+  .carousel-item {
+      display: inline-block;
+      min-width: 80%;
+      margin-right: 10px;
+      border:none;
+      box-shadow: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card-container {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 20px;
+    justify-content: space-around;
+  }
+
+  .card {
+    max-width: calc(50% - 20px);
+    flex: 1;
+  }
+
+  .card-image {
+    width: 100%;
+    border-radius: 20px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+}

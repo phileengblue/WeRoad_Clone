@@ -1,0 +1,46 @@
+    /*Dimensione delle icone*/
+    .progress-img-size {
+        height: 54px;
+        width: 54px;
+        position: absolute;
+        transform: translate(48%);
+    }
+
+    .progress-text-color {
+        color: #4D4D4D;
+        font-weight: lighter;
+        font-size: 16px;
+    }
+
+    .text-progress-size{
+        height: 38px;
+        width: 88px;
+    }
+
+    .custom-progress-margin-top {
+        margin:120px 372px 0;
+    }
+    
+    .progress-percent-color-1 {
+        color: #8BC53E;
+    }
+
+    .progress-percent-color-2 {
+        color: #40B0ED;
+    }
+
+    .progress-percent-color-3 {
+        color: #FABF3A;
+    }
+
+    .progress-percent-color-4 {
+        color: #F48D38;
+    }
+
+    .progress-percent-color-5 {
+        color: #8565F9;
+    }
+
+    .custom-mt{
+        margin-top: -30px;
+    }

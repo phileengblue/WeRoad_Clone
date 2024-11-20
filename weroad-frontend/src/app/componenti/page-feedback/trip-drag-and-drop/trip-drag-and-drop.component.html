@@ -1,0 +1,59 @@
+<div class="container mt-6">
+  <div class="row">
+    <!-- Lista Viaggi -->
+    <div class="col-md-4 list-container">
+      <h4>Lista Viaggi</h4>
+      <div class="trip-list">
+        <div class="trip-card mb-3" *ngFor="let card of trip; let i = index" draggable="true"
+          (dragstart)="onDragStart($event, card)">
+          <div class="card h-100 d-flex flex-column">
+            <div class="position-relative">
+              <img [src]="card.image.url" class="card-img-top" alt="{{ card.title }}" />
+            </div>
+            <div class="card-body d-flex flex-column flex-grow-1">
+              <h5 class="card-title">{{ card.title }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Viaggi Selezionati -->
+    <div class="col-md-7 selected-trips-container d-flex flex-column" style="height: 100vh;"
+      (dragover)="allowDrop($event)" (drop)="onDrop($event, selectedTrips)">
+      <div>
+        <h4>Viaggi Selezionati</h4>
+        <nz-steps [nzCurrent]="currentStep" class="nz-steps mt-2">
+          <nz-step nzTitle="Seleziona Viaggi"></nz-step>
+          <nz-step nzTitle="Feedback Questionario" [nzDisabled]="selectedTrips.length < 3"></nz-step>
+          <nz-step nzTitle="Completato" [nzDisabled]="selectedTrips.length < 3"></nz-step>
+        </nz-steps>
+
+        <!-- Griglia Viaggi Selezionati -->
+        <div class="selected-trips-list d-flex flex-wrap">
+          <div class="selected-trip trip-card mb-3 small-card" *ngFor="let selectedTrip of selectedTrips"
+            draggable="true" (dragstart)="onDragStart($event, selectedTrip)"
+            (dragend)="onDragEnd($event, selectedTrip)">
+            <div class="card h-100 d-flex flex-column position-relative">
+              <button (click)="removeTrip(selectedTrip)" class="btn-close btn btn-danger btn-sm"></button>
+              <div class="position-relative">
+                <img [src]="selectedTrip.image.url" class="card-img-top" alt="{{ selectedTrip.title }}" />
+              </div>
+              <div class="card-body d-flex flex-column flex-grow-1">
+                <h5 class="card-title1">{{ selectedTrip.title }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Allerta e Stepper in fondo -->
+      <div *ngIf="selectedTrips.length < 3 || selectedTrips.length > 5" class="alert alert-danger mt-3">
+        Seleziona tra 3 e 5 viaggi per continuare.
+      </div>
+      <button class="btn btn-custom btn-primary mt-3" [disabled]="!canProceed()" (click)="goToNextPage()">
+        Avanti
+      </button>
+    </div>
+  </div>
+</div>

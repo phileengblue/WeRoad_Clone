@@ -1,0 +1,29 @@
+<div>
+  <div>
+    <div *ngFor="let item of upcover" class="up-cover-container">
+      <img [src]="trip.images[0]?.url" alt="{{ trip.title }}" class="up-cover-image">
+      <div class="up-cover-text">
+        <h1 class="up-cover-text-h1">{{trip.title}}</h1>
+        <div class="d-flex align-items-center mb-2">
+          <img src="../../../assets/trip-details/icons/star.png" alt="Trustpilot" class="star-img me-1">
+          <p class="mb-0">Trustpilot</p>
+          <nz-rate class="stars-overlay" [ngModel]="item.rating" nzAllowHalf nzDisabled>{{item.rating}}</nz-rate>
+          <p class="fw-bold ms-2 mb-0">{{item.rating}}</p>
+          <p class="ms-2 mb-0">{{item.numberReview}} Reviews</p>
+        </div>
+
+        <!-- Visualizza solo su tablet e mobile -->
+        <div *ngIf="isTabletOrMobile" class="first-departure-details">
+          <div class="d-flex align-items-center mb-1">
+            <img src="../../../assets/trip-details/icons/calendar.png" alt="calendar" class="calendar-img">
+            <p class="first-departure-color">Prima partenza {{ item.firstDepartureDate }}</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <img src="../../../assets/trip-details/icons/clock.png" alt="duration" class="day-night-img">
+            <p class="first-departure-color">{{ item.duration }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

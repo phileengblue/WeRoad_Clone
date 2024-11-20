@@ -1,0 +1,138 @@
+.up-cover-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+  }
+
+  .up-cover-video{
+    position: relative; 
+    height: 600px; 
+    display: block; 
+    overflow: hidden;
+  }
+  
+  .up-cover-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 700px;
+    object-fit: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    filter: brightness(70%);
+  }
+  
+  .up-cover-text {
+    /*margin-top:90px;*/
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  .up-cover-text-h1 {
+    font-size: 48px;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  .up-cover-text-p {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: "Raleway", sans-serif;    ;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  
+  @media (max-width: 768px) {
+
+    .up-cover-video{
+      height: auto;
+      max-width: auto;
+    }
+
+    .up-cover-image {
+      height: 559px;
+      max-height: 700px;
+      object-fit: cover;
+    }
+  
+    .up-cover-text {
+      top: 50%;
+    }
+  
+    .up-cover-text-h1 {
+      font-size: 36px;
+      font-family: 'Gilroy', sans-serif;
+      font-weight: bold;
+      margin: 0 0 10px 0;
+      color: white;
+      margin: 0;
+      line-height: 1.2;
+    }
+    
+    .up-cover-text-p {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-family: "Raleway", sans-serif;
+      color: white;
+      margin: 0;
+      line-height: 1.2;
+    }
+  
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .up-cover-container {
+        display: block;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .up-cover-video {
+        display: none;
+    }
+
+    .up-cover-image {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        filter: brightness(70%);
+    }
+
+    .up-cover-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 0 20px;
+        max-width: 90%;
+    }
+
+    .up-cover-text-h1 {
+        font-size: 3.5vw;
+        font-family: 'Gilroy', sans-serif;
+        font-weight: bold;
+        color: white;
+        margin: 0 0 10px 0;
+        line-height: 1.2;
+    }
+
+    .up-cover-text-p {
+        font-size: 2vw;
+        font-family: "Raleway", sans-serif;    ;
+        color: white;
+        margin: 0;
+        line-height: 1.2;
+    }
+}

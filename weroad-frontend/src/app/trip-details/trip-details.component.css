@@ -1,0 +1,804 @@
+
+/*MOBILE E TABLET*/
+/*Immagine di sfondo*/
+.bg-img-trip {
+    background-image: url("../../assets/trip-details/bg-img-trip-details.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 65vh;
+    filter: brightness(70%); 
+}
+
+/*Titolo del viaggio*/
+.title-trip-fs {
+    font-size: 32px;
+    color: white;
+}
+
+.title-container {
+    width: 320px;
+}
+
+/*Dimensione del contenitore dell'header (titolo + info)*/
+.header-container {
+    height: 197.9px;
+    /* width: 320px; */
+    padding: 0 15px;
+    position: absolute;
+    bottom: 260px;
+    left: 0;
+}
+
+.header-text-color {
+    color: white;
+    font-size: 16px;
+}
+
+.first-departure-fs {
+    font-size: 14px;
+}
+
+.star-img {
+    height: 20px;
+    width: 20px;
+}
+
+.custom-grade-margin {
+    margin-left: 100px;
+}
+
+.custom-margin2 {
+    margin-left: 15px;
+}
+/*Rating*/
+    .stars-overlay {
+        position: absolute;
+        transform: translateX(145%) translateY(40%);
+        background: #00a76f;
+        padding: 1px;
+        display: flex;
+        align-items: center;
+    }
+     
+    :host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-first {
+        color: #ffffff;
+    }
+     
+    :host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-second {
+        color: #00a76f;
+    }
+     
+    :host ::ng-deep .ant-rate-star-full .ant-rate-star-second,
+    :host ::ng-deep .ant-rate-star-half .ant-rate-star-second {
+        color: #ffffff;
+    }
+     
+    :host ::ng-deep .ant-rate-star-first {
+        color: #00a76f;
+    }
+     
+    :host ::ng-deep .ant-rate-star.ant-rate-star-zero .ant-rate-star-second {
+        color: #787878;
+    }
+     
+    :host ::ng-deep .ant-rate-star {
+        font-size: 16px;
+        margin-right: 2px;
+    }
+     
+    :host ::ng-deep .ant-rate {
+        display: flex;
+        align-items: center;
+    }
+     
+    :host ::ng-deep .ant-rate-star {
+        margin-left: 5px;
+        font-size: 8px;
+        color: #ffffff;
+    }
+
+    .calendar-img {
+        height: 25px;
+        width: 25px;
+        transform:  translateY(-8%);
+    }
+
+    .day-night-img {
+        height: 30px;
+        width: 30px;
+        transform:  translateY(-12%);
+    }
+
+    .first-departure-color {
+        color: #828282;
+        font-size: 12px;
+    }
+
+    .first-departure-price-color {
+        color: #4D4D4D;
+        font-size: 24px;
+    }
+
+    .first-departure-button {
+        width: 217px;
+        height: 43.60px;
+        border-radius: 8px;
+        background-color: #FF4859;
+        color: white;
+        border: none;
+        font-size: 16px;
+    }
+
+    .first-departure-button:hover {
+        background-color: #f51f47;
+    }
+
+    .line{
+        border: 0.5px solid #E8E8E8;
+        width: 320px;
+    }
+
+    .first-departure-price-position {
+        transform:  translateY(-20%);
+    }
+
+    .p-scalapay-color {
+        color: #656565;
+        font-size: 12px;
+    }
+
+    .scalapay-img {
+        height: 15px;
+        width: 65px;
+    }
+
+    /*Progress*/
+    .progress-img-size {
+        height: 54px;
+        width: 54px;
+        /* position: absolute; */
+        /* transform: translate(0%); */
+        transform:  translateY(-145%);
+    }
+
+    .progress-text-color {
+        color: #4D4D4D;
+        font-weight: lighter;
+        font-size: 14px;
+    }
+
+    
+    .progress-percent-color-1 {
+        color: #8BC53E;
+    }
+
+    .progress-percent-color-2 {
+        color: #40B0ED;
+    }
+
+    .progress-percent-color-3 {
+        color: #FABF3A;
+    }
+
+    .progress-percent-color-4 {
+        color: #F48D38;
+    }
+
+    .progress-percent-color-5 {
+        color: #8565F9;
+    }
+
+    .custom-overflow{
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+
+        scroll-behavior: smooth;
+        display: block; 
+    }
+
+    .content-scroll {
+        flex: 0 0 auto;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    .custom-mt{
+        margin-top: -40px;
+    }
+
+    /*Viaggio in pillole*/
+    .pills-container {
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        margin: 20px auto;
+        text-align: left;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .pills-container h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .pills-container p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5;
+        height: 170px; /* Altezza del paragrafo */
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Effetto sfumato */
+    .pills-container p::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px; /* Altezza della sfumatura */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    /*Bottone*/
+    .read-more {
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid #568D95;
+        color: #568D95;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .read-more:hover {
+        background-color: transparent;
+
+    }
+
+    /*Colore testo*/
+    .text-color{
+        color: #4D4D4D;
+    }
+
+    /*Prossima partenza*/
+    .next-departure{
+        height: 100%;
+        width: 90%;
+        border: 1px solid #E8E8E8;
+        border-radius: 16px;
+    }
+
+    .arrow-icon-size{
+        height: 8px;
+        width: 8px;
+    }
+
+    .link-details-fs{
+        font-size: 12px;
+    }
+
+    .plane-icon-size{
+        height: 10px;
+        width: 10px;
+    }
+
+    .card-line{
+        border: 0.5px solid #DFDFDF;
+        width: 383px;
+    }
+
+    .icons-things-included-size{
+        height: 32px;
+        width: 32px;
+    }
+
+    .text-color{
+        color: #4D4D4D;
+    }
+
+    .card-button{
+        height: 64px;
+        width: 344px;
+        color: white;
+        background-color: #427F88;
+        border-radius: 8px;
+        border: none;
+    }
+
+    .card-button:hover{
+        background-color: rgb(65 128 137 / 0.95);
+    }
+
+    .link-blu-color{
+        color: rgb(65 128 137 / 0.95);
+    }
+
+    .text-red-color{
+        color: #FF4658;
+    }
+
+    /*Bottone vedi calendario partenze*/
+    .first-departure-button {
+        width: 70%;
+        height: 43.60px;
+        border-radius: 8px;
+        background-color: #FF4859;
+        color: white;
+        border: none;
+        font-size: 16px;
+    }
+
+    .first-departure-button:hover {
+        background-color: #f51f47;
+    }
+
+
+
+/*TABLET*/
+@media screen and (min-width: 768px) {
+    .header-container {
+        /* width: 768px; */
+        bottom: 235px;
+        left: 0;
+    }
+
+    /*Titolo fs*/
+    .title-trip-fs {  
+        font-size: 30px;
+    } 
+    
+    /*Linea*/
+    .line{
+        width: 700px;
+    }
+}
+
+
+
+
+
+
+/*DESKTOP*/
+@media screen and (min-width: 992px) {
+
+    /*Contenitore titolo e media recensioni*/
+    .header-container {
+        bottom: 360px;
+        color: white;
+        width: 550px;
+        margin-left: 40px;
+    }
+
+    .custom-left-margin {
+        margin-left: 120px;
+    }
+
+    /*Contenitore titolo*/
+    .title-container {
+        font-size: 48px;
+        height: 144px;
+        width: 525px;
+        line-height: normal;
+    }
+
+    /*Media recensioni*/
+    .custom-grade-margin{
+        margin-left: 113px;
+    }
+    .custom-margin {
+        margin-top: 70px;
+    }
+
+    .custom-margin2 {
+        margin-left: 28px;
+    }
+
+    /*Posizione rating*/
+        .stars-overlay {
+            transform: translateX(150%) translateY(27%);
+            background: #00a76f;
+            padding: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+    /*Contenitore prima partenza*/
+    .first-departure {
+        height: 93.5px;
+        width: 1160px;
+        border-radius: 16px;
+        box-shadow: rgba(0,0,0,0.1) 0px 0px 30px 0px;
+        background-color: white;
+        padding: 25px 30px 25px 30px;
+        position: absolute;
+        top: 410px;
+        right: -20px;
+        left: 130px;
+        z-index: 10;
+        
+    }
+
+    /*Testo prima partenza*/
+    .header-text-color {
+        font-size: 18px;
+        color: #4D4D4D;
+    }
+
+    .calendar-img {
+        height: 25px;
+        width: 25px;
+    }
+
+    .day-night-img {
+        height: 30px;
+        width: 30px;
+        transform:  translateY(-8%);
+    }
+
+    .first-departure-color {
+        color: #828282;
+        font-size: 12px;
+    }
+
+    .first-departure-price-color {
+        color: #FF4859;
+        font-size: 24px;
+    }
+
+    .custom-margin-left {
+        margin-left: 370px;
+    }
+
+    /*Bottone vedi calendario partenze*/
+    .first-departure-button {
+        width: 217px;
+        height: 43.60px;
+        border-radius: 8px;
+        background-color: #FF4859;
+        color: white;
+        border: none;
+        font-size: 16px;
+    }
+
+    .first-departure-button:hover {
+        background-color: #f51f47;
+    }
+
+    .first-departure-price-position {
+        transform:  translateY(-40%);
+    }
+
+
+    /*Progress*/
+
+    /*Dimensione delle icone*/
+    .progress-img-size {
+        height: 54px;
+        width: 54px;
+        position: absolute;
+        transform: translate(48%);
+    }
+
+    .progress-text-color {
+        color: #4D4D4D;
+        font-weight: lighter;
+        font-size: 16px;
+    }
+
+    .text-progress-size{
+        height: 38px;
+        width: 88px;
+    }
+
+    .custom-progress-margin-top {
+        margin: 120px 110px 0;
+    }
+    
+    .progress-percent-color-1 {
+        color: #8BC53E;
+    }
+
+    .progress-percent-color-2 {
+        color: #40B0ED;
+    }
+
+    .progress-percent-color-3 {
+        color: #FABF3A;
+    }
+
+    .progress-percent-color-4 {
+        color: #F48D38;
+    }
+
+    .progress-percent-color-5 {
+        color: #8565F9;
+    }
+
+    .custom-mt{
+        margin-top: -30px;
+    }
+
+
+    /*Viaggio in pillole e card*/
+
+    /*SX Paragrafo*/
+    .custom-paragraph-margin-left{
+        margin-left: 70px;
+    }
+
+    .paragraph-title{
+        color: #4D4D4D;
+    }
+
+    .link-color{
+        color: #427F88;
+    }
+    
+    .custom-title-paragraph-fs{
+        font-size: 18px;
+    }
+
+    /*DX Card*/
+    .right-card{  
+        border: 1px solid #DFDFDF;
+        height: 100%;
+        width: 384px;
+        border-radius: 16px; 
+    }
+
+    .things-included-container{
+        width: 344px;
+    }
+
+    .arrow-icon-size{
+        height: 8px;
+        width: 8px;
+    }
+
+    .link-details-fs{
+        font-size: 12px;
+    }
+
+    .plane-icon-size{
+        height: 10px;
+        width: 10px;
+    }
+
+    .card-line{
+        border: 0.5px solid #DFDFDF;
+        width: 383px;
+    }
+
+    .icons-things-included-size{
+        height: 32px;
+        width: 32px;
+    }
+
+    .text-color{
+        color: #4D4D4D;
+    }
+
+    .card-button{
+        height: 64px;
+        width: 344px;
+        color: white;
+        background-color: #427F88;
+        border-radius: 8px;
+        border: none;
+    }
+
+    .card-button:hover{
+        background-color: rgb(65 128 137 / 0.95);
+    }
+
+    /*Banner*/
+    .banner{
+        border: 1px solid #FB4657;
+        height: 59px;
+        width: 100%;
+        background-color: #FB4657;
+        color: white
+    }
+
+    .banner-button{
+        height: 39px;
+        width: 77px;
+        color: #417E87;
+        background-color: #FFFFFF;
+        border-radius: 6px;
+        border: none;
+    }
+
+    /*STICKY*/
+    .sticky-paragraph{
+        position: sticky;
+        top: 0;
+    }
+
+    .questions-me-custom{
+        margin-right: 200px;
+    }
+
+    .x-custom-position{
+        transform: translateX(1800%) translateY(-5%);
+    }
+
+    /*RECENSIONI*/
+    .reviews-card{
+        height: 367px;
+        width: 1158px;
+        border: 1px solid #DFDFDF;
+        border-radius: 16px;
+    }
+
+    /*Rating*/
+    .stars-overlay-reviews {
+        background: #00a76f;
+        padding: 1px;
+        display: flex;
+        align-items: center;
+        width: 80px;
+    }
+
+    .green-star-size{
+        height: 20px;
+        width: 20px;
+    }
+
+    .reviews-text{
+        font-size: 14px;
+    }
+    .reviews-date{
+        color: #999999;
+        font-size: 14px;
+    }
+
+    .custom-ms-reviews{
+        margin-left: 285px;
+    }
+
+
+    
+    /* GRIGLIA */
+    .grid-container {
+        display: grid;
+        gap: 2px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 1158px;
+        height: 580px;
+        margin-top: 90px;
+    }
+
+    .grid-item {
+        background-color: #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .item1 {
+        grid-column: span 2;
+        grid-row: span 1;
+        border-radius: 16px 0 0 0;
+    }
+
+    .item2 {
+        grid-column: span 1;
+        grid-row: span 2;
+        border-radius: 0;
+    }
+
+    .item3 {
+        grid-column: span 1;
+        grid-row: span 1;
+        border-radius: 0 16px 0 0;
+    }
+
+    .item4 {
+        grid-column: span 1;
+        grid-row: span 1;
+        border-radius: 0 0 0 16px;
+    }
+
+    .item5 {
+        grid-column: span 1;
+        grid-row: span 1;
+        border-radius: 0;
+    }
+
+    .item6 {
+        grid-column: span 1;
+        grid-row: span 1;
+        border-radius: 0 0 16px 0;
+        filter: brightness(30%);
+    }
+
+    .grid-text-fs{
+        font-size: 14px;
+        color: #FFFFFF;
+    }
+
+    /*Posizione testo ultima foto della griglia*/
+    .grid-text-position{
+        transform: translateX(30%) translateY(-350%);
+    }
+
+
+    /*Cooridnatori*/
+    .coordinators-container{
+        height: 400px;
+    }
+
+    .coordinators-button{
+        height: 39px;
+        width: 212px;
+        color: white;
+        background-color: #427F88;
+        border-radius: 6px;
+        border: none;
+        font-size: 14.4px;
+    }
+
+    .coordinators-button:hover{
+        background-color: rgb(65 128 137 / 0.95);
+    }
+    
+    .profile-container {
+        width: 150px; 
+        height: 150px;
+        overflow: hidden; /* Nasconde le parti dell'immagine che escono dal contenitore */
+        border-radius: 50%; /* cerchio */
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        margin-left: -30px; /* Sovrappone l'immagine precedente */
+        border: 5px solid white; /*bordi*/
+    }
+    
+    .profile-container:first-child {
+        margin-left: 0; /* Rimuove la sovrapposizione dal primo elemento */
+    }
+    
+    .profile-image {
+        width: 100%;
+        height: 100%; 
+        object-fit: cover; /* l'immagine copre tutto lo spazio disponibile senza distorsioni */
+        border-radius: 50%; 
+    }
+
+    /*Linea*/
+    .coordinators-line{
+        border: 0.5px solid #E8E8E8;
+        width: 1158px;
+    }
+
+    /*Cose da sapere*/
+    .things-know-size{
+        height: 35px;
+        width: 35px;
+    }
+    
+    .things-know-container{
+        margin-left: 150px;
+    }
+}

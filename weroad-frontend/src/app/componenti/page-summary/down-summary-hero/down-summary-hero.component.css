@@ -1,0 +1,68 @@
+/*Aereo*/
+.plane {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    background: url('../../../../assets/login-img/plane.png') no-repeat;
+    background-size: 400px;
+    animation: movePlane 20s linear infinite;
+    margin-top: -500px;
+}
+
+@keyframes movePlane {
+    from {
+        -webkit-transform: translateX(-150%);
+        transform: translateX(-150%);
+    }
+    to {
+        -webkit-transform: translateX(300%);
+        transform: translateX(300%);
+    }
+}
+
+/*Nuvole*/
+.clouds {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    background: url('../../../../assets/login-img/cloud-3.png') no-repeat;
+    background-size: 200px;
+    animation: moveClouds 45s linear infinite;
+    margin-top: -450px;
+}
+
+@keyframes moveClouds {
+    from {
+        -webkit-transform: translate(-50%, 30%);
+        transform: translate(-50%, 30%);
+    }
+    to {
+        -webkit-transform: translate(500%, 0);
+        transform: translate(500%, 0);
+    }
+}
+
+/*Montagna background*/
+.mountain-size {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 375px) and (max-width: 991px) {
+    .mountain-size {
+        height: 365px;
+    }
+
+    .plane {
+        background-size: 200px;
+        animation: movePlane 30s linear infinite;
+        margin-top: 80px;
+    }
+
+    /*sm lg*/
+    .clouds {
+        background-size: 90px;
+        animation: moveClouds 30s linear infinite;
+        margin-top: 100px;
+    }
+}

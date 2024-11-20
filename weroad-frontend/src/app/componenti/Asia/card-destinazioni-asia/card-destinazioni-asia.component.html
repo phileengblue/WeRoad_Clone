@@ -1,0 +1,369 @@
+<!-- *ngFor="let card of trips; let i = index" : Riga 15 -->
+<!-- card.filestorage_id.url : Riga 18 -->
+
+
+<div class="total-container">
+
+    <div>
+        <div class="nameCountry-text-h1" *ngFor="let card of nameCountry">
+            <h1 id="Giappone">{{card.title1}}</h1>
+        </div>
+    </div>
+
+    <div class="container mt-6">
+        <div class="row g-4">
+            <div class="col-md-4 cards" *ngFor="let card of tripsByCountry['Giappone']; let i = index" [class.central-card]="i === 9">
+                <div class=" card h-100 d-flex flex-column">
+                    <div class="position-relative">
+                        <img [src]="card.trip_image" class="card-img-top" alt="{{card.title}}">
+                        <img *ngIf="card.logo" [src]="card.logo" class="card-logo" alt="logo">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-grow-1">
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <div *ngIf="card.vote" class="rating-container">
+                            <nz-rate class="stars-overlay" [ngModel]="card.vote" nzDisabled></nz-rate>
+                            <span class="rating-value">{{card.vote}}</span>
+                        </div>
+                        <div class="card-text d-flex justify-content-between align-items-center flex-grow-1">
+                            <span class="card-text"><i class="bi bi-calendar4-range"></i> {{card.duration}} giorni</span>
+                            <span class="card-text">a partire da <span class="card-price">{{card.price}} <span class="card-price-euro">€ </span></span></span>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-outline-primary flex-grow-1 me-1">Vedi date</a>
+                                <a class="btn btn-danger flex-grow-1 ms-1">Vedi viaggio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <div class=nameCountry-text-h1 *ngFor="let card of nameCountry">
+                <h1 id="India">{{card.title2}}</h1>
+        </div>
+
+    </div>
+    <div class="container mt-6">
+        <div class="row g-4">
+            <div class="col-md-4 cards" *ngFor="let card of tripsByCountry['India']; let i = index" [class.central-card]="i === 9">
+                <div class=" card h-100 d-flex flex-column">
+                    <div class="position-relative">
+                        <img [src]="card.trip_image" class="card-img-top" alt="{{card.title}}">
+                        <img *ngIf="card.logo" [src]="card.logo" class="card-logo" alt="logo">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-grow-1">
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <div *ngIf="card.vote" class="rating-container">
+                            <nz-rate class="stars-overlay" [ngModel]="card.vote" nzDisabled></nz-rate>
+                            <span class="rating-value">{{card.vote}}</span>
+                        </div>
+                        <div class="card-text d-flex justify-content-between align-items-center flex-grow-1">
+                            <span class="card-text"><i class="bi bi-calendar4-range"></i> {{card.duration}} giorni</span>
+                            <span class="card-text">a partire da <span class="card-price">{{card.price}} <span class="card-price-euro">€ </span></span></span>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-outline-primary flex-grow-1 me-1">Vedi date</a>
+                                <a class="btn btn-danger flex-grow-1 ms-1">Vedi viaggio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <div>
+        <div class=nameCountry-text-h1 *ngFor="let card of nameCountry">
+                <h1 id="Nepal">{{card.title3}}</h1>
+        </div>
+    </div>
+
+    <div class="container mt-6">
+        <div class="row g-4">
+            <div class="col-md-4 cards" *ngFor="let card of tripsByCountry['Nepal']; let i = index" [class.central-card]="i === 9">
+                <div class=" card h-100 d-flex flex-column">
+                    <div class="position-relative">
+                        <img [src]="card.trip_image" class="card-img-top" alt="{{card.title}}">
+                        <img *ngIf="card.logo" [src]="card.logo" class="card-logo" alt="logo">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-grow-1">
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <div *ngIf="card.vote" class="rating-container">
+                            <nz-rate class="stars-overlay" [ngModel]="card.vote" nzDisabled></nz-rate>
+                            <span class="rating-value">{{card.vote}}</span>
+                        </div>
+                        <div class="card-text d-flex justify-content-between align-items-center flex-grow-1">
+                            <span class="card-text"><i class="bi bi-calendar4-range"></i> {{card.duration}} giorni</span>
+                            <span class="card-text">a partire da <span class="card-price">{{card.price}} <span class="card-price-euro">€ </span></span></span>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-outline-primary flex-grow-1 me-1">Vedi date</a>
+                                <a class="btn btn-danger flex-grow-1 ms-1">Vedi viaggio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+    <div>
+        <div class=nameCountry-text-h1 *ngFor="let card of nameCountry">
+                <h1 id="Sri Lanka">{{card.title4}}</h1>
+        </div>
+    </div>
+
+    <div class="container mt-6">
+        <div class="row g-4">
+            <div class="col-md-4 cards" *ngFor="let card of tripsByCountry['Sri Lanka']; let i = index" [class.central-card]="i === 9">
+                <div class=" card h-100 d-flex flex-column">
+                    <div class="position-relative">
+                        <img [src]="card.trip_image" class="card-img-top" alt="{{card.title}}">
+                        <img *ngIf="card.logo" [src]="card.logo" class="card-logo" alt="logo">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-grow-1">
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <div *ngIf="card.vote" class="rating-container">
+                            <nz-rate class="stars-overlay" [ngModel]="card.vote" nzDisabled></nz-rate>
+                            <span class="rating-value">{{card.vote}}</span>
+                        </div>
+                        <div class="card-text d-flex justify-content-between align-items-center flex-grow-1">
+                            <span class="card-text"><i class="bi bi-calendar4-range"></i> {{card.duration}} giorni</span>
+                            <span class="card-text">a partire da <span class="card-price">{{card.price}} <span class="card-price-euro">€ </span></span></span>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-outline-primary flex-grow-1 me-1">Vedi date</a>
+                                <a class="btn btn-danger flex-grow-1 ms-1">Vedi viaggio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <div>
+        <div class=nameCountry-text-h1 *ngFor="let card of nameCountry">
+                <h1 id="Uzbekistan">{{card.title5}}</h1>
+        </div>
+    </div>
+
+    <div class="container mt-6">
+        <div class="row g-4">
+            <div class="col-md-4 cards" *ngFor="let card of tripsByCountry['Uzbekistan']; let i = index" [class.central-card]="i === 9">
+                <div class=" card h-100 d-flex flex-column">
+                    <div class="position-relative">
+                        <img [src]="card.trip_image" class="card-img-top" alt="{{card.title}}">
+                        <img *ngIf="card.logo" [src]="card.logo" class="card-logo" alt="logo">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-grow-1">
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <div *ngIf="card.vote" class="rating-container">
+                            <nz-rate class="stars-overlay" [ngModel]="card.vote" nzDisabled></nz-rate>
+                            <span class="rating-value">{{card.vote}}</span>
+                        </div>
+                        <div class="card-text d-flex justify-content-between align-items-center flex-grow-1">
+                            <span class="card-text"><i class="bi bi-calendar4-range"></i> {{card.duration}} giorni</span>
+                            <span class="card-text">a partire da <span class="card-price">{{card.price}} <span class="card-price-euro">€ </span></span></span>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-outline-primary flex-grow-1 me-1">Vedi date</a>
+                                <a class="btn btn-danger flex-grow-1 ms-1">Vedi viaggio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <div>
+        <div class=nameCountry-text-h1 *ngFor="let card of nameCountry">
+                <h1 id="Corea del Sud">{{card.title6}}</h1>
+        </div>
+    </div>
+
+    <div class="container mt-6">
+        <div class="row g-4">
+            <div class="col-md-4 cards" *ngFor="let card of tripsByCountry['Corea del Sud']; let i = index" [class.central-card]="i === 9">
+                <div class=" card h-100 d-flex flex-column">
+                    <div class="position-relative">
+                        <img [src]="card.trip_image" class="card-img-top" alt="{{card.title}}">
+                        <img *ngIf="card.logo" [src]="card.logo" class="card-logo" alt="logo">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-grow-1">
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <div *ngIf="card.vote" class="rating-container">
+                            <nz-rate class="stars-overlay" [ngModel]="card.vote" nzDisabled></nz-rate>
+                            <span class="rating-value">{{card.vote}}</span>
+                        </div>
+                        <div class="card-text d-flex justify-content-between align-items-center flex-grow-1">
+                            <span class="card-text"><i class="bi bi-calendar4-range"></i> {{card.duration}} giorni</span>
+                            <span class="card-text">a partire da <span class="card-price">{{card.price}} <span class="card-price-euro">€ </span></span></span>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-outline-primary flex-grow-1 me-1">Vedi date</a>
+                                <a class="btn btn-danger flex-grow-1 ms-1">Vedi viaggio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <div>
+        <div class=nameCountry-text-h1 *ngFor="let card of nameCountry">
+                <h1 id="Cina">{{card.title7}}</h1>
+        </div>
+    </div>
+
+    <div class="container mt-6">
+        <div class="row g-4">
+            <div class="col-md-4 cards" *ngFor="let card of tripsByCountry['Cina'] ; let i = index" [class.central-card]="i === 9">
+                <div class=" card h-100 d-flex flex-column">
+                    <div class="position-relative">
+                        <img [src]="card.trip_image" class="card-img-top" alt="{{card.title}}">
+                        <img *ngIf="card.logo" [src]="card.logo" class="card-logo" alt="logo">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-grow-1">
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <div *ngIf="card.vote" class="rating-container">
+                            <nz-rate class="stars-overlay" [ngModel]="card.vote" nzDisabled></nz-rate>
+                            <span class="rating-value">{{card.vote}}</span>
+                        </div>
+                        <div class="card-text d-flex justify-content-between align-items-center flex-grow-1">
+                            <span class="card-text"><i class="bi bi-calendar4-range"></i> {{card.duration}} giorni</span>
+                            <span class="card-text">a partire da <span class="card-price">{{card.price}} <span class="card-price-euro">€ </span></span></span>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-outline-primary flex-grow-1 me-1">Vedi date</a>
+                                <a class="btn btn-danger flex-grow-1 ms-1">Vedi viaggio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <div>
+        <div class=nameCountry-text-h1 *ngFor="let card of nameCountry">
+                <h1 id="Maldive">{{card.title8}}</h1>
+        </div>
+    </div>
+
+    <div class="container mt-6">
+        <div class="row g-4">
+            <div class="col-md-4 cards" *ngFor="let card of tripsByCountry['Maldive']; let i = index" [class.central-card]="i === 9">
+                <div class=" card h-100 d-flex flex-column">
+                    <div class="position-relative">
+                        <img [src]="card.trip_image" class="card-img-top" alt="{{card.title}}">
+                        <img *ngIf="card.logo" [src]="card.logo" class="card-logo" alt="logo">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-grow-1">
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <div *ngIf="card.vote" class="rating-container">
+                            <nz-rate class="stars-overlay" [ngModel]="card.vote" nzDisabled></nz-rate>
+                            <span class="rating-value">{{card.vote}}</span>
+                        </div>
+                        <div class="card-text d-flex justify-content-between align-items-center flex-grow-1">
+                            <span class="card-text"><i class="bi bi-calendar4-range"></i> {{card.duration}} giorni</span>
+                            <span class="card-text">a partire da <span class="card-price">{{card.price}} <span class="card-price-euro">€ </span></span></span>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-outline-primary flex-grow-1 me-1">Vedi date</a>
+                                <a class="btn btn-danger flex-grow-1 ms-1">Vedi viaggio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <div>
+        <div class=nameCountry-text-h1 *ngFor="let card of nameCountry">
+                <h1>{{card.title9}}</h1>
+        </div>
+    </div>
+
+    <div class="container mt-6">
+        <div class="row g-4">
+            <div class="col-md-4 cards" *ngFor="let card of tripsByCountry['Mongolia']; let i = index" [class.central-card]="i === 9">
+                <div class=" card h-100 d-flex flex-column">
+                    <div class="position-relative">
+                        <img [src]="card.trip_image" class="card-img-top" alt="{{card.title}}">
+                        <img *ngIf="card.logo" [src]="card.logo" class="card-logo" alt="logo">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-grow-1">
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <div *ngIf="card.vote" class="rating-container">
+                            <nz-rate class="stars-overlay" [ngModel]="card.vote" nzDisabled></nz-rate>
+                            <span class="rating-value">{{card.vote}}</span>
+                        </div>
+                        <div class="card-text d-flex justify-content-between align-items-center flex-grow-1">
+                            <span class="card-text"><i class="bi bi-calendar4-range"></i> {{card.duration}} giorni</span>
+                            <span class="card-text">a partire da <span class="card-price">{{card.price}} <span class="card-price-euro">€ </span></span></span>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-outline-primary flex-grow-1 me-1">Vedi date</a>
+                                <a class="btn btn-danger flex-grow-1 ms-1">Vedi viaggio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <div>
+        <div class=nameCountry-text-h1 *ngFor="let card of nameCountry">
+                <h1>{{card.title10}}</h1>
+        </div>
+    </div>
+
+    <div class="container mt-6">
+        <div class="row g-4">
+            <div class="col-md-4 cards" *ngFor="let card of tripsByCountry['Cina']; let i = index" [class.central-card]="i === 9">
+                <div class=" card h-100 d-flex flex-column">
+                    <div class="position-relative">
+                        <img [src]="card.trip_image" class="card-img-top" alt="{{card.title}}">
+                        <img *ngIf="card.logo" [src]="card.logo" class="card-logo" alt="logo">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-grow-1">
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <div *ngIf="card.vote" class="rating-container">
+                            <nz-rate class="stars-overlay" [ngModel]="card.vote" nzDisabled></nz-rate>
+                            <span class="rating-value">{{card.vote}}</span>
+                        </div>
+                        <div class="card-text d-flex justify-content-between align-items-center flex-grow-1">
+                            <span class="card-text"><i class="bi bi-calendar4-range"></i> {{card.duration}} giorni</span>
+                            <span class="card-text">a partire da <span class="card-price">{{card.price}} <span class="card-price-euro">€ </span></span></span>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-outline-primary flex-grow-1 me-1">Vedi date</a>
+                                <a class="btn btn-danger flex-grow-1 ms-1">Vedi viaggio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div> 
+
+</div>

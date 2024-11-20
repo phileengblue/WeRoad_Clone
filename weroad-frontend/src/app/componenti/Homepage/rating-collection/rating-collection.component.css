@@ -1,0 +1,222 @@
+.logo-footer {
+    margin: 20px 0;
+    svg {
+        width: 150px;
+        height: auto;
+    }
+}
+
+.title-collection{
+    font-family: 'Gilroy Bold', sans-serif;
+    font-weight: bold;
+    color: rgb(77, 77, 77);
+    font-size: 36px;
+    font-style: normal;
+    line-height: 40px;
+}
+
+.p-colection{
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    color: rgb(77, 77, 77);
+    font-size: 20px;
+    line-height: 28px;
+    font-style: normal;
+}
+
+.trustpilot-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.text-trustpilot{
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    color: rgb(77, 77, 77);
+    line-height: 20px;
+    font-weight: 400;
+}
+.trustpilot-text {
+    font-size: 1.1rem;
+    color: #00a76f;
+}
+
+.rating {
+    font-weight: bold;
+    color: rgb(77, 77, 77);
+}
+
+.custom-grade-margin {
+    font-size: 1.2rem;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.stars-overlay {
+    background: #00a76f;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+}
+
+.trustscore,
+.reviews {
+    font-size: 1rem;
+    color: rgb(77, 77, 77);
+
+}
+
+.review-link {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #00a76f;
+}
+
+.review-link svg {
+    width: 105px;
+    height: auto;
+}
+
+:host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-first {
+    color: #ffffff;
+}
+
+:host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-second {
+    color: #00a76f;
+}
+
+:host ::ng-deep .ant-rate-star-full .ant-rate-star-second,
+:host ::ng-deep .ant-rate-star-half .ant-rate-star-second {
+    color: #ffffff;
+}
+
+:host ::ng-deep .ant-rate-star-first {
+    color: #00a76f;
+}
+
+:host ::ng-deep .ant-rate-star {
+    font-size: 16px;
+    margin-right: 2px;
+}
+
+:host ::ng-deep .ant-rate {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.cta-section {
+    margin-top: 40px;
+    position: relative;
+    img {
+        width: 100%;
+        height: 550px;
+        max-width: 1160px;
+        max-height: 550px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .cta-content {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #000000;
+    }
+    .cta-title {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    .cta-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    .btn {
+        font-size: 1.2rem;
+        padding: 10px 30px;
+        background-color: #ff5a5f;
+        border: none;
+        border-radius: 5px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .logo-footer {
+        margin: 15px 0;
+        svg {
+            width: 100px;
+        }
+    }
+
+    .trustpilot-section {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+
+    .trustpilot-text {
+        font-size: 1rem;
+    }
+
+    .rating {
+        font-size: 1.2rem;
+    }
+
+    .custom-grade-margin {
+        font-size: 1rem;
+        margin: 0 5px;
+    }
+
+    .stars-overlay {
+        padding: 0;
+    }
+
+    .trustscore,
+    .reviews {
+        font-size: 0.9rem;
+    }
+
+    .review-link {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .review-link svg {
+        width: 80px;
+    }
+
+    .cta-section {
+        margin-top: 20px;
+        img {
+            width: 398px;
+            height: 550px;
+            max-width: 398px;
+            max-height: 550px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .cta-content {
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .cta-title {
+            font-size: 1.8rem;
+        }
+        .cta-subtitle {
+            font-size: 1rem;
+        }
+        .btn {
+            font-size: 1rem;
+            padding: 8px 20px;
+        }
+    }
+}
+

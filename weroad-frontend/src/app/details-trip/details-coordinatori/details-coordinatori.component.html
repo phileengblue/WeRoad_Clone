@@ -1,0 +1,18 @@
+<div class="coordinators-container d-flex justify-content-center align-items-center mt-5 row">
+    <!--sx-->
+    <div class="d-flex flex-column col-4 ms-5">
+        <h3 class="fw-bold text-color">I coordinatori</h3>
+        <p class="p-0 text-color fw-light">I nostri coordinatori sono scelti perché sono persone come te, viaggiatori appassionati, capaci di condividere il viaggio come uno dei tuoi compagni ma con l’esperienza professionale da tour leader per portarti a vivere il meglio dell’esperienza del tuo viaggio.</p>
+        <button class="coordinators-button">Scopri tutto sui coordinatori</button>
+    </div>
+
+    <!--dx-->
+        <div class="offset-1 col-5 d-flex justify-content-center me-3">
+            <div class="profile-container" *ngFor="let coordinator of coordinators">
+                <img [src]="coordinator.image" alt="coordinator" class="profile-image">
+            </div>
+        </div>
+
+    <!--linea-->
+    <div class="coordinators-line"></div>
+</div>

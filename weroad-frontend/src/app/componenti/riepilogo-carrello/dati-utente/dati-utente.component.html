@@ -1,0 +1,42 @@
+<div class="section dati-utente">
+  <h3>Dati Weroader Lover</h3>
+  <form [formGroup]="datiUtenteForm" (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <label>Nome <span class="required">*</span></label>
+      <input type="text" formControlName="nome" placeholder="Inserisci il nome" />
+      <p *ngIf="datiUtenteForm.get('nome')?.invalid && datiUtenteForm.get('nome')?.touched" class="error">
+        Il nome può contenere solo lettere e spazi.
+      </p>
+    </div>
+
+    <div class="input-group">
+      <label>Cognome <span class="required">*</span></label>
+      <input type="text" formControlName="cognome" placeholder="Inserisci il cognome" />
+      <p *ngIf="datiUtenteForm.get('cognome')?.invalid && datiUtenteForm.get('cognome')?.touched" class="error">
+        Il cognome può contenere solo lettere e spazi.
+      </p>
+    </div>
+
+    <div class="input-group">
+      <label>E-mail <span class="required">*</span></label>
+      <input type="email" formControlName="email" placeholder="Inserisci l'email" />
+      <p *ngIf="datiUtenteForm.get('email')?.invalid && datiUtenteForm.get('email')?.touched" class="error">
+        Inserisci un indirizzo email valido.
+      </p>
+    </div>
+
+    <div class="input-group">
+      <label>Telefono <span class="required">*</span></label>
+      <input type="number" formControlName="telefono" placeholder="Inserisci il numero di telefono" />
+      <p *ngIf="datiUtenteForm.get('telefono')?.invalid && datiUtenteForm.get('telefono')?.touched" class="error">
+        Inserisci solo numeri per il telefono.
+      </p>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+  

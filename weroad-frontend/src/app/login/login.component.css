@@ -1,0 +1,210 @@
+/*Header*/
+.header-container {
+    height: 54px;
+    width: 100%;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+/*Icona-weroad*/
+.weroad-icon {
+    height: 33px;
+    width: 121px;
+}
+
+/*Dimensioni form*/
+.form-size{
+    width: 320px;
+}
+
+/*Titolo*/
+h1{
+    color: #4C4C4C;
+    font-size: 33.6px;
+    font-weight: bold;
+}
+
+/*Sottotiolo*/
+p{
+    color: #4C4C4C;
+    font-size: 17.6px;
+    font-weight: 300;
+}
+
+/*input*/
+.custom-input{
+    height: 41px;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    padding-left: 50px;
+}
+
+.custom-input:focus{
+    outline: none;
+}
+
+.input-img{
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transform: translateX(-1000%);
+    margin: 12px;
+}
+
+input::placeholder{
+    color: #818181;
+    font-size: 12px;
+    padding: 8px 12px 8px 0px;
+    transform: translateY(-6%);
+}
+
+/*Recupero password*/
+.forgot-psw-color{
+    color: #FF4658;
+    font-size: 12px;
+}
+
+.forgot-psw-btn{
+    background-color: #FF4658;
+    border: 1px solid #FF4658;
+    color: #fff;
+    text-align: end;
+    padding-right: 15px;
+    font-size: 12px;
+    width: 88px;
+    height: 28px;
+    border-radius: 3px;
+}
+.button-img{
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    transform: translateX(1900%);
+    margin: 12px;
+}
+
+/*Linee*/
+.line{
+    border-top: 1px solid  #BFBFBF;
+    width: 320px;
+}
+
+.custom-line-fs{
+    font-size: 12px;
+}
+
+.form-btn{
+width: 320px;
+height: 40px;
+border-radius: 3px;
+}
+
+/*Bottone magic link*/
+.btn-magic-link{
+    background-color: #3898DB;
+    border: 1px solid #3898DB;
+    color: #fff;
+    font-size: 17px;
+}
+
+.link-img{
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    transform: translateX(10%);
+    margin-top: 35px;
+    margin-left: 12px;
+}
+
+/*Bottone Google link*/
+.btn-google-link{
+    background-color: #323232;
+    border: 1px solid #323232;
+    color: #fff;
+    font-size: 17px;
+}
+
+.google-img{
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    transform: translateX(10%);
+    margin-top: 29px;
+    margin-left: 12px;
+}
+
+/*Aereo*/
+.plane {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    background: url('../../assets/login-img/plane.png') no-repeat;
+    background-size: 400px;
+    animation: movePlane 20s linear infinite;
+    margin-top: 260px;
+
+
+}
+
+@keyframes movePlane {
+    from {
+        transform: translate(-150%);
+    }
+    to {
+        transform: translate(300%);
+    }
+}
+
+/*PAGINA RECUPERO PASSWORD*/
+.p-forgot-psw{
+    font-size: 12px;
+}
+
+/*Nuvole*/
+.clouds {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    background: url('../../assets/login-img/cloud-3.png') no-repeat;
+    background-size: 200px;
+    animation: moveClouds 45s linear infinite;
+    margin-top: 365px;
+}
+
+@keyframes moveClouds {
+    from {
+        transform: translateX(-50%);
+        transform: translateY(30%);
+    }
+    to {
+        transform: translateX(500%);
+    }
+}
+
+/*Montagna background*/
+.mountain-size{
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 375px) and (max-width: 991px) {
+    .mountain-size{
+        height: 365px;
+
+    }
+
+    .plane {
+        background-size: 200px;
+        animation: movePlane 30s linear infinite;
+        margin-top: 80px;
+    }
+
+    /*sm lg*/
+    .clouds {
+        background-size: 90px;
+        animation: moveClouds 30s linear infinite;
+        margin-top: 100px
+
+    }
+    
+}

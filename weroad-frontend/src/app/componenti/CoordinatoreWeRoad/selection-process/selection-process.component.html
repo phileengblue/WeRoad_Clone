@@ -1,0 +1,14 @@
+<div class="selection-process-container">
+    <h1 id="Scopri il processo di selezione">{{ kingTitle[0].title }}</h1>
+    
+    <div *ngFor="let item of numericList; let i = index" class="selection-step">
+      <div class="number-container">
+        <div class="number-icon">{{ i + 1 }}</div>
+      </div>
+      <div class="step-content">
+        <h2>{{ item.title }}</h2>
+        <p>{{ item.p }}</p>
+      </div>
+    </div>
+  </div>
+  

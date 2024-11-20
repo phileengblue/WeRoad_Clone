@@ -1,0 +1,324 @@
+.card-img-top {
+    height: 185px;
+    width: 185px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    height: auto;
+}
+
+.cards {
+    max-width: 185px;
+    cursor: pointer;
+}
+
+
+.card-body:hover,
+.card-link:hover {
+    text-decoration: underline;
+    color: rgb(51, 51, 51);
+}
+
+.card-body1:hover,
+.card-link1:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+
+
+.card-title {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    line-height: 22px;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(51, 51, 51);
+    word-spacing: 0px;
+    display: block;
+    margin-left: -15px;
+}
+
+
+.me-3 {
+    min-width: 185px;
+    max-width: 269px;
+    background-color: transparent;
+}
+
+.image-container {
+    position: relative;
+    height: 185px;
+    width: 185px;
+}
+
+.days-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    line-height: 22px;
+    font-style: normal;
+}
+
+.cart-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px; /* Sposta il pulsante in basso a destra */
+    background: rgba(255, 255, 255, 0.9); /* Sfondo leggermente opaco */
+    color: #000000;
+    padding: 5px 10px;
+    border-radius: 50%; /* Forma circolare */
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+    line-height: 22px;
+    font-style: normal;
+    border: 1px solid #ddd; /* Aggiungi un bordo per evidenziare */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cart-overlay:hover {
+    background: #00a76f;
+    color: white;
+    transform: scale(1.1); /* Effetto di ingrandimento al passaggio del mouse */
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.cart-button {
+    background-color: #ffffff; 
+    color: #000000; 
+    border: 2px solid #000000; 
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+.cart-button:hover {
+    background-color: rgb(255, 75, 76); 
+    color: #ffffff; 
+    transform: scale(1.05); 
+    border-color: rgb(255, 75, 76);
+}
+
+
+.rating-overlay {
+    position: absolute;
+    bottom: 19px;
+    left: -20px;
+    background: none;
+    color: white;
+    padding: 20px 10px 20px 140px;
+    font-weight: bold;
+}
+
+.stars-overlay {
+    position: absolute;
+    bottom: 35px;
+    left: 18px;
+    background: none;
+    color: white;
+    padding: 20px 8px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Gilroy Bold', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 40px;
+    color: rgb(50, 50, 50);
+    margin-top: 30px;
+}
+
+.paragrafo {
+    line-height: 28px;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    font-style: normal;
+    margin-top: 20px;
+    color: rgb( 50, 50, 50); 
+}
+
+.card-text {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+    margin-left: -15px;
+    margin-top: -10px;
+
+}
+
+.stars-overlay {
+    position: absolute;
+    background: #00a76f;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+}
+
+:host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-first {
+    color: #ffffff;
+}
+
+:host ::ng-deep .ant-rate-star.ant-rate-star-half:last-child .ant-rate-star-second {
+    color: #00a76f;
+}
+
+:host ::ng-deep .ant-rate-star-full .ant-rate-star-second,
+:host ::ng-deep .ant-rate-star-half .ant-rate-star-second {
+    color: #ffffff;
+}
+
+:host ::ng-deep .ant-rate-star-first {
+    color: #00a76f;
+}
+
+:host ::ng-deep .ant-rate-star.ant-rate-star-zero .ant-rate-star-second {
+    color: #787878;
+}
+
+:host ::ng-deep .ant-rate-star {
+    font-size: 16px;
+    margin-right: 2px;
+}
+
+:host ::ng-deep .ant-rate {
+    display: flex;
+    align-items: center;
+}
+
+:host ::ng-deep .ant-rate-text {
+    margin-left: 5px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.carosello1,
+.carosello2,
+.carosello3 {
+    padding-left: 60px;
+}
+
+
+.background-carosello2{
+ background-color: rgb(13, 25, 26);
+}
+
+.background-carosello1{
+    background-color: rgb(234, 227, 220);
+}
+
+
+.background-text1{
+    background-color: rgb(217, 235, 248);
+}
+
+.background-text2{
+    background-color: rgb(2, 54, 66);
+}
+   
+.color-white{
+    color: rgb( 255, 255, 255);
+
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    z-index: 1000;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .notification.success {
+    background-color: #00a76f;
+    color: #fff;
+  }
+  
+  .notification.error {
+    background-color: #ff4c4c;
+    color: #fff;
+  }
+  
+
+@media (max-width: 768px) {
+
+    .scrolling-wrapper {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+
+        .cards {
+            display: inline-block;
+
+        }
+    }
+
+    .section-title {
+        font-size: 30px;
+        line-height: 38px;
+        font-weight: bold;
+        color: rgb(77, 77, 77);
+        margin-top: 30px;
+    }
+
+    .carosello1,
+    .carosello2,
+    .carosello3 {
+        padding-left: 0;
+    }
+
+    .card-title {
+        font-size: 16px;
+        font-family: "Raleway", sans-serif;
+        line-height: 22.4px;
+        font-weight: 700;
+        font-style: normal;
+        color: rgb(51, 51, 51);
+        word-spacing: 0px;
+        display: block;
+        margin-left: -15px;
+    }
+
+    .card-text {
+        font-family: "Raleway", sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgb(51, 51, 51);
+        margin-left: -15px;
+        margin-top: -10px;
+
+    }
+
+    .color-white{
+        color: rgb( 255, 255, 255);
+    
+    }
+}

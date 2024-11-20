@@ -1,0 +1,45 @@
+<div *ngIf="isMobileView || isTabletView">
+<div  *ngFor="let item of upcover" class="up-cover-container">
+  <img [src]="item.Image" alt="{{item.title}}" class="up-cover-image opacity-100"> 
+  <div class="up-cover-text">
+    <h1 class="up-cover-text-h1">{{item.title}}</h1>
+    <p class="up-cover-text-p">{{item.subtitle}}</p>
+  </div>
+</div>
+</div>
+
+<div *ngIf="!isMobileView && !isTabletView" class="up-cover-video">
+  <iframe id="F_0y275OsAA" class="pointer-events-none absolute z-0" frameborder="0" allowfullscreen=""
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" title="Bootcamp Orvieto WeRoad 2019" width="100%" height="1060"
+    src="https://www.youtube.com/embed/F_0y275OsAA?mute=1&amp;loop=1&amp;playlist=F_0y275OsAA&amp;playsinline=1&amp;autoplay=1&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;fs=0&amp;cc_load_policy=0&amp;iv_load_policy=3&amp;autohide=0&amp;disablekb=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.weroad.it&amp;widgetid=1">
+  </iframe>
+
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; color: white; font-size: 10rem; align-items: center; display: flex;justify-content: center;">
+    <div class="up-cover-text">
+      <h1 class="up-cover-text-h1">Diventa Coordinatore WeRoad</h1>
+      <p class="up-cover-text-p">Esplora il mondo e conosci nuovi amici</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!--Versione con il video da rivedere-->
+
+<!--
+  
+<div *ngFor="let item of upcover" class="up-cover-container">
+  <video src="https://www.youtube.com/embed/F_0y275OsAA?mute=1&loop=1&playsinline=1&autoplay=1&controls=0&showinfo=0&modestbranding=1&fs=0&cc_load_policy=0&iv_load_policy=3&autohide=0&disablekb=1&enablejsapi=1&origin=https%3A%2F%2Fwww.weroad.it&widgetid=2" class=" up-cover-video up-cover-image opacity-100" autoplay muted loop type="">
+  </video>
+  <div class="up-cover-text">
+    <h1 class="up-cover-text-h1">{{item.title}}</h1>
+    <p class="up-cover-text-p">{{item.subtitle}}</p>
+  </div>
+</div>
+
+-->
+
+<!--src="../Video/newCoordinatore/Bootcamp Orvieto WeRoad 2019.mp4"-->

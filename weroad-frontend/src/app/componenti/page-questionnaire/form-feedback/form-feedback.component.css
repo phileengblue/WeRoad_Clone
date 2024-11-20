@@ -1,0 +1,81 @@
+.nz-steps {
+    margin-top: 30px;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.form-container {
+    width: 60%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 1rem;
+}
+
+.form-check-label {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.slider-container {
+    width: 80%;
+}
+
+.background-nz-text{
+    background-color: rgb(240, 242, 244);
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+
+.button-container {
+    display: flex;
+    gap: 10px; 
+    justify-content: center; 
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+}
+
+
+.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    font-size: 0.875rem;
+    color: #dc3545;
+    margin-top: 5px;
+}

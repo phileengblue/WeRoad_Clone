@@ -1,0 +1,239 @@
+<div class="container my-4">
+  <div class="text-center mb-3">
+    <h2 class="title">Tutti i turni in partenza per {{upcover.month.name}}</h2>
+  </div>
+  <div class="d-flex justify-content-between align-items-center container-line">
+    <div class="btn-group">
+      <button type="button" class="btn btn-outline-secondary" (click)="openModal('dove')">
+        <span class="d-none d-lg-inline">Dove vuoi andare?</span>
+        <span class="d-inline d-lg-none">Dove</span>
+      </button>
+      <button type="button" class="btn btn-primary active" (click)="openModal('quando')">
+        <span class="d-none d-lg-inline">Quando:</span> <strong></strong>
+      </button>
+      <button type="button" class="btn btn-primary active" (click)="openModal('filtri')">
+        <span class="d-none d-lg-inline">Filtri:</span>
+        <span class="d-inline d-lg-none">Filtri:</span>
+        <strong>{{ numeroFiltri }}</strong>
+      </button>
+    </div>
+    <button type="button" class="btn btn-outline-secondary" (click)="openModal('ordinamento')">
+      <span class="me-2"><i class="bi bi-arrow-down-up"></i></span>
+      <span class="d-none d-lg-inline">Ordinamento</span>
+    </button>
+  </div>
+</div>
+
+<!-- Bottone nascosto per aprire manualmente la modale -->
+<button id="openModalButton" type="button" class="d-none" data-bs-toggle="modal"
+  data-bs-target="#fullScreenModal"></button>
+
+<!-- Modal -->
+<div class="modal fade" id="fullScreenModal" tabindex="-1" aria-labelledby="fullScreenModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container d-flex justify-content-between align-items-center container-line">
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary" (click)="changePage('dove')">
+              <span class="d-none d-lg-inline">{{ selectedDoveText }}</span>
+              <span class="d-inline d-lg-none">Dove</span>
+            </button>
+            <button type="button" class="btn btn-primary active" (click)="changePage('quando')">
+              <span class="d-none d-lg-inline">Quando:</span> <strong>{{ dateRange }}</strong>
+            </button>
+            <button type="button" class="btn btn-primary active" (click)="changePage('filtri')">
+              <span class="d-none d-lg-inline">Filtri:</span>
+              <span class="d-inline d-lg-none">Filtri:</span>
+              <strong>{{ filteredTripsCount }}</strong>
+            </button>
+          </div>
+          <div class="d-flex align-items-center">
+            <button type="button" class="btn btn-outline-secondary" (click)="changePage('ordinamento')">
+              <span class="me-2"><i class="bi bi-arrow-down-up"></i></span>
+              <span class="d-none d-lg-inline">Ordinamento</span>
+            </button>
+            <button type="button" class="btn btn-danger ms-2" data-bs-dismiss="modal">Chiudi</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-body" [ngSwitch]="currentPage">
+        <!-- Filtro "dove" -->
+        <div *ngSwitchCase="'dove'">
+          <div class="container-sm">
+            <div class="row text-center mb-3">
+              <div *ngFor="let continent of continents" class="col">
+                <button class="btn btn-dove btn-outline-secondary w-100 mb-2"
+                  (click)="onContinentClick(continent.name)">
+                  {{ continent.name }}
+                </button>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row">
+              <div *ngFor="let continent of continents" class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <div class="continent-header mb-2">
+                  <strong>{{ continent.name }}</strong>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <button class="btn btn-sm btn-outline-secondary me-2">+</button>
+                  <span>Seleziona tutto</span>
+                </div>
+                <div *ngFor="let country of continent.countries" class="form-check mb-2">
+                  <input type="checkbox" class="form-check-input" [(ngModel)]="country.selected"
+                    id="{{continent.name}}-{{country.name}}" (change)="onContinentClick(country.name)">
+                  <label class="form-check-label" for="{{continent.name}}-{{country.name}}">{{ country.name }}</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filtro "quando" -->
+        <div *ngSwitchCase="'quando'">
+          <nz-calendar [(ngModel)]="date" [(nzMode)]="mode" (nzPanelChange)="panelChange($event)"
+            (nzSelectChange)="onDateChange($event)"></nz-calendar>
+        </div>
+
+
+
+
+        <!-- Filtro "filtri" -->
+        <div *ngSwitchCase="'filtri'">
+          <div class="container">
+            <div class="mb-4">
+              <h5 class="text-gray-700 fw-bold">Fascia di prezzo</h5>
+              <div class="row">
+                <div class="col-12 col-lg-4 mb-3" *ngFor="let option of priceOptions1">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" [id]="'price-' + option.value"
+                      [value]="option.value" (change)="onPriceMinClick(option.value)">
+                    <label class="form-check-label" [for]="'price-' + option.value">{{ option.label }}</label>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 mb-3" *ngFor="let option of priceOptions2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" [id]="'price-' + option.value"
+                      [value]="option.value" (change)="onPriceMaxClick(option.value)">
+                    <label class="form-check-label" [for]="'price-' + option.value">{{ option.label }}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-4">
+              <hr class="border-gray-200">
+            </div>
+
+            <div class="mb-4">
+              <h5 class="text-gray-700 fw-bold">Fascia di età</h5>
+              <div class="row">
+                <div class="col-12 col-lg-4 mb-3" *ngFor="let option of ageOptions">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" [id]="'age-' + option.value" [value]="option.value"
+                      (change)="onRangeClick(option.label)">
+                    <label class="form-check-label" [for]="'age-' + option.value">Età {{ option.label }}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-4">
+              <hr class="border-gray-200">
+            </div>
+
+            <div class="mb-4">
+              <h5 class="text-gray-700 fw-bold">Stato dei turni</h5>
+              <div class="row">
+                <div class="col-12 col-lg-4 mb-3" *ngFor="let option of statusOptions">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" [id]="'status-' + option.value"
+                      [value]="option.value" (change)="onStatusClick(option.value)">
+                    <label class="form-check-label" [for]="'status-' + option.value">{{ option.label }}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-4">
+              <hr class="border-gray-200">
+            </div>
+            <div class="mb-4">
+              <h5 class="text-gray-700 fw-bold">Numero di giorni</h5>
+              <div class="row">
+                <div class="col-12 col-lg-4 mb-3" *ngFor="let option of daysOptions1">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" [id]="'days-' + option.value" [value]="option.value"
+                      (change)="onDurationMaxClick(option.day)">
+                    <label class="form-check-label" [for]="'days-' + option.value">{{ option.label }}</label>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 mb-3" *ngFor="let option of daysOptions2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" [id]="'days-' + option.value" [value]="option.value"
+                      (change)="onDurationMinClick(option.day)">
+                    <label class="form-check-label" [for]="'days-' + option.value">{{ option.label }}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filtro "ordinamento" -->
+        <div *ngSwitchCase="'ordinamento'">
+          <div class="container">
+            <div class="mx-auto max-w-4xl">
+              <div class="row g-0">
+                <div class="col-lg-6 mb-3 mb-lg-0 px-3">
+                  <div class="mb-3 text-lg fw-semibold">Ordina per:</div>
+                  <div *ngFor="let option of sortOptions"
+                    class="filters-button d-flex justify-content-between align-items-center rounded-lg border border-gray-300 bg-white mb-2 p-3"
+                    (click)="selectSortOption(option.value)" [class.active]="selectedSortOption === option.value"
+                    style="cursor: pointer;">
+                    <span>{{ option.label }}</span>
+                    <div class="ml-2">
+                      <div class="check-custom1">
+                        <div class="iconfull icon-check"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 px-3">
+                  <div class="mb-3 text-lg fw-semibold">Oppure visualizza prima i viaggi con più:</div>
+                  <div *ngFor="let mood of moodOptions"
+                    class="filters-button d-flex justify-content-between align-items-center rounded-lg border border-gray-300 bg-white mb-2 p-3"
+                    (click)="selectMoodOption(mood.value)" [class.active]="selectedMoodOption === mood.value"
+                    style="cursor: pointer;">
+                    <div class="d-flex align-items-center">
+                      <img [src]="mood.iconUrl" alt="{{ mood.label }}" class="mr-2" style="width: 24px; height: 24px;">
+                      <span>{{ mood.label }}</span>
+                    </div>
+                    <div class="ml-2">
+                      <div class="check-custom">
+                        <div class="iconfull icon-check"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Annulla e vedi tutti</button>
+        <button type="button" class="btn btn-primary" (click)="applyFilters()" data-bs-dismiss="modal">
+          Vedi {{ filteredTripsCount }} turni
+        </button>
+      </div>
+    </div>
+  </div>

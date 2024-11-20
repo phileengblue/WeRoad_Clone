@@ -1,0 +1,15 @@
+.spunta-verde {
+    width: 100px;
+    height: 100px;
+    background-color: #00ff00; 
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 20px auto; 
+  }
+ .img-spunta-verde{
+  background-size: 50%;
+  width: 160px;
+ } 

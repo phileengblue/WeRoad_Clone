@@ -1,0 +1,19 @@
+<div class="section riepilogo-carrello">
+  <div class="viaggi-scroll">
+    <div *ngFor="let item of cart" class="viaggio-container">
+      <img 
+        [src]="item.image.url" 
+        [alt]="'Immagine di ' + item.title" 
+        class="viaggio-image" 
+      />
+      <div class="viaggio-content">
+        <p class="viaggio-title">{{ item.title }}</p>
+        <p class="viaggio-prezzo">Prezzo: € {{ item.price }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="cart.length > 0">
+    <h4 class="totale-carrello">Totale Carrello: {{ getTotalPrice() | currency:'EUR' }}</h4>
+  </div>
+</div>

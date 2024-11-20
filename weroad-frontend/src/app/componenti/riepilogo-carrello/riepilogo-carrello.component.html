@@ -1,0 +1,19 @@
+<app-navbar-questionnaire></app-navbar-questionnaire>
+<div class="container">
+  <!-- <img src="https://strapi-imaginary.weroad.it/resource/webp-cover/130274/.webp" alt="WeRoad Logo" class="logo" /> -->
+  <div class="grid">
+    <app-dati-utente class="dati-utente"  (formValidity)="updateDatiUtenteValid($event)"></app-dati-utente>
+    <app-pagamento class="pagamento" (formValidity)="updatePagamentoValid($event)"></app-pagamento>
+    <app-indirizzo-fatturazione class="indirizzo-fatturazione" (formValidity)="updateIndirizzoValid($event)"></app-indirizzo-fatturazione>
+    <div class="banner conferma-banner">Conferma dei dati</div>
+    <div class="total-resume-carrello">
+      <div class="banner riepilogo-banner">Riepilogo Viaggi e Totale del Pagamento</div>
+      <app-resume-carrello></app-resume-carrello>
+    </div>
+    <app-conferma class="conferma"></app-conferma>
+    <app-procedi-pagamento class="procedi-pagamento"[isDatiUtenteValid]="isDatiUtenteValid" [isIndirizzoValid]="isIndirizzoValid"[isPagamentoValid]="isPagamentoValid"></app-procedi-pagamento>
+  </div>
+</div>
+<app-hero-down-questionnaire></app-hero-down-questionnaire>
+
+  

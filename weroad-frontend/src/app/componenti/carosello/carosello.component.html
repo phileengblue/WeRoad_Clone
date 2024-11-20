@@ -1,0 +1,147 @@
+<section>
+  <div class="container-sm">
+    <div class="mt-3 card-container">
+      <div class="row">
+        <h2 class="section-title">I viaggi più amati dai nostri WeRoaders e suggeriti per te</h2>
+        <div class="col-12 carosello1 scrolling-wrapper">
+          <div class="cards d-flex">
+            <div class="card me-3" *ngFor="let card1 of trip">
+              <div class="image-container">
+                <img [src]="card1.image.url" class="card-img-top" alt="{{card1.title}}">
+                <span class="days-overlay">{{card1.duration}} giorni</span>
+                <nz-rate class="stars-overlay" [ngModel]="card1.vote" nzDisabled></nz-rate>
+                <span class="rating-overlay">{{card1.vote}}</span>
+              </div>
+              <div class="card-body" (click)="navigateToShow(card1.id)">
+                <h3 class="card-title">{{card1.title}}</h3>
+                <p class="card-text">A partire da {{card1.price}} €</p>
+              </div>
+              
+              <!-- Pulsante del carrello spostato sotto i testi -->
+              <div class="card-footer">
+                <button 
+                  class="cart-button"
+                  (click)="addToCart(card1); $event.stopPropagation()">
+                  <i class="bi bi-cart-plus"></i> Aggiungi al carrello
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div
+  *ngIf="notification"
+  [ngClass]="{'success': notificationType === 'success', 'error': notificationType === 'error'}"
+  class="notification"
+>
+  {{ notification }}
+</div>
+
+
+<div class="mt-3 background-text1">
+  <div class="row">
+    <h2 class="section-title">Il fascino di Madre Natura</h2>
+    <h3 class="paragrafo">Dalle Rainbow Mountains al Grand Canyon: gli spettacoli naturali più pazzeschi del mondo!
+    </h3>
+  </div>
+</div>
+
+
+<section class="background-carosello1">
+  <div [ngStyle]="{
+    'background-image': 'url(' + imgCarosello[0].img1 + ')', 
+    'background-size': 'cover', 
+    'background-position': 'center', 
+    'width': 'auto',
+    'height': '330px'
+  }">
+  </div>
+  <div class="container-xl">
+    <div class="mt-3">
+      <div class="row">
+        <div class="col-12 carosello3 scrolling-wrapper">
+          <div class="cards d-flex">
+            <div class="card cards2 me-3" *ngFor="let card2 of trip">
+              <div class="image-container">
+                <img [src]="card2.image.url" class="card-img-top" alt="{{card2.title}}">
+                <span class="days-overlay">{{card2.duration}} giorni</span>
+                <nz-rate class="stars-overlay" [ngModel]="card2.vote" nzDisabled></nz-rate>
+                <span class="rating-overlay">{{card2.vote}}</span>
+              </div>
+              <div class="card-body" (click)="navigateToShow(card2.id)">
+                <h3 class="card-title">{{card2.title}}</h3>
+                <p class="card-text">A partire da {{card2.price}} €</p>
+              </div>
+              
+              <!-- Pulsante del carrello sotto la card -->
+              <div class="card-footer">
+                <button 
+                  class="cart-button"
+                  (click)="addToCart(card2); $event.stopPropagation()">
+                  <i class="bi bi-cart-plus"></i> Aggiungi al carrello
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<div class=" background-text2">
+  <div class="row">
+    <h2 class="section-title color-white">Sapore di mare</h2>
+    <h3 class="paragrafo color-white">Salsedine, spiagge, sole e un gruppo di nuovi amici che ti aspettano!</h3>
+  </div>
+</div>
+
+
+
+<section class="background-carosello2">
+  <div [ngStyle]="{
+    'background-image': 'url(' + imgCarosello[1].img2 + ')', 
+    'background-size': 'cover', 
+    'background-position': 'center', 
+    'width': 'auto',
+    'height': '330px'
+  }">
+  </div>
+  <div class="container-xl">
+    <div class="mt-3">
+      <div class="row">
+        <div class="col-12 carosello3 scrolling-wrapper">
+          <div class="cards d-flex">
+            <div class="card cards2 me-3" *ngFor="let card3 of trip">
+              <div class="image-container">
+                <img [src]="card3.image.url" class="card-img-top" alt="{{card3.title}}">
+                <span class="days-overlay color-white">{{card3.duration}} giorni</span>
+                <nz-rate class="stars-overlay color-white" [ngModel]="card3.vote" nzDisabled></nz-rate>
+                <span class="rating-overlay color-white">{{card3.vote}}</span>
+              </div>
+              <div class="card-body card-body1" (click)="navigateToShow(card3.id)">
+                <h3 class="card-title color-white">{{card3.title}}</h3>
+                <p class="card-text color-white">A partire da {{card3.price}} €</p>
+              </div>
+              
+              <!-- Pulsante del carrello sotto la card -->
+              <div class="card-footer">
+                <button 
+                  class="cart-button"
+                  (click)="addToCart(card3); $event.stopPropagation()">
+                  <i class="bi bi-cart-plus"></i> Aggiungi al carrello
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

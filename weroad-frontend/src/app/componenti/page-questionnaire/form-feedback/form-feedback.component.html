@@ -1,0 +1,71 @@
+<nz-steps [nzCurrent]="currentStep" class="nz-steps mt-2">
+    <nz-step nzTitle="Seleziona Viaggi" [nzDisabled]="selectedTrips.length < 3"></nz-step>
+    <nz-step nzTitle="Feedback Questionario"></nz-step>
+    <nz-step nzTitle="Riepilogo" [nzDisabled]="selectedTrips.length < 3"></nz-step>
+</nz-steps>
+
+<!-- Form di feedback -->
+<div *ngIf="currentStep === 1" class="container d-flex justify-content-center mt-5">
+    <form (ngSubmit)="onSubmit()" #feedbackForm="ngForm" class="form-container text-center">
+        <div *ngFor="let question of questions; let i = index" class="mb-5">
+            <h5 class="text-start fw-bold">{{ i + 1 }} - {{ question.label }}</h5>
+
+            <ng-container *ngIf="question.type === 'radio'">
+                <div class="form-check d-flex justify-content-start ms-3" *ngFor="let option of question.options">
+                    <input type="radio" class="form-check-input" name="question{{ i }}" [value]="option"
+                        [(ngModel)]="answers[i]" required
+                        [ngClass]="{'is-invalid': feedbackForm.submitted && !answers[i]}" />
+                    <label class="form-check-label ms-2">{{ option }}</label>
+                </div>
+                <div *ngIf="question.hasOtherOption" class="form-check d-flex align-items-center ms-3 mt-2">
+                    <input type="radio" class="form-check-input" name="question{{ i }}" [value]="'Altro'"
+                        (change)="answers[i] = { option: 'Altro', value: '' }" />
+                    <label class="form-check-label ms-2">Altro</label>
+                    <input type="text" class="form-control ms-2" *ngIf="answers[i]?.option === 'Altro'"
+                        [(ngModel)]="answers[i].value" name="otherOption{{ i }}" placeholder="Specificare" required />
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="question.type === 'slider'">
+                <nz-row nzGutter="8" class="mt-2 slider-container">
+                    <nz-col nzSpan="12">
+                        <nz-slider [(ngModel)]="answers[i]" name="question{{ i }}" [nzMin]="1" [nzMax]="10"
+                            [nzStep]="0.5" required>
+                        </nz-slider>
+                    </nz-col>
+                    <nz-col nzSpan="4">
+                        <nz-input-number [(ngModel)]="answers[i]" name="question{{ i }}" [nzMin]="1" [nzMax]="10"
+                            [nzStep]="0.5"  class='background-nz-text' required>
+                        </nz-input-number>
+                    </nz-col>
+                </nz-row>
+            </ng-container>
+
+            <ng-container *ngIf="question.type === 'checkbox'">
+                <div class="form-check d-flex justify-content-start ms-3" *ngFor="let option of question.options">
+                    <input type="checkbox" class="form-check-input" name="question{{ i }}" [value]="option"
+                        (change)="onCheckboxChange($event, i)" />
+                    <label class="form-check-label ms-2">{{ option }}</label>
+                </div>
+            </ng-container>
+
+            <div *ngIf="feedbackForm.submitted && !answers[i]" class="invalid-feedback d-block text-start">
+                Questa domanda è obbligatoria.
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button type="button" class="btn btn-secondary" (click)="goToPreviousStep()">Indietro</button>
+            <button nz-button nzType="primary" class="btn btn-danger"
+                [disabled]="!feedbackForm.form.valid">Continua</button>
+        </div>
+    </form>
+</div>
+
+<!-- Componente di riepilogo delle risposte -->
+<app-summary *ngIf="currentStep === 2"
+    [questions]="questions"
+    [answers]="answers"
+    (goBack)="goToPreviousStep()"
+    (complete)="currentStep = 3">
+</app-summary>
