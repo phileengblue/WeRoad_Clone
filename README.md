@@ -14,6 +14,23 @@ Questo progetto open-source replica l'esperienza offerta da piattaforme di viagg
 
 Abbiamo incluso funzionalità nuove rispetto al sito originale, per essere sempre al passo con i tempi e soddisfare le aspettative degli utenti di oggi.
 
+## **Screenshots**
+
+### Homepage
+![Homepage](./assets/Homepage-1.png)
+![Homepage](./assets/Homepage-2.png)
+![Homepage](./assets/Homepage-3.png)
+![Homepage](./assets/Homepage-4.png)
+
+### Pagina Dettaglio 
+![Natura](./assets/schermata2.png)
+
+### Coordinatori e Avventure
+![Coordinatori](./assets/schermata3.png)
+
+### Footer e Partner
+![Footer](./assets/schermata4.png)
+
 ## **Autori e riconoscimenti**
 - Filippo Gurrata 
 - Michele Luca
@@ -22,3 +39,4 @@ Abbiamo incluso funzionalità nuove rispetto al sito originale, per essere sempr
 ---
 
 **Ci auguriamo che ti piaccia e non vediamo l'ora di ricevere i tuoi feedback e contributi!**
+
