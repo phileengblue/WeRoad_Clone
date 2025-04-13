@@ -14,8 +14,6 @@ Questo progetto open-source replica l'esperienza offerta da piattaforme di viagg
 
 Abbiamo incluso funzionalità nuove rispetto al sito originale, per essere sempre al passo con i tempi e soddisfare le aspettative degli utenti di oggi.
 
----
-
 ## **Screenshots**
 
 ### 🏠 Homepage
@@ -84,8 +82,6 @@ Abbiamo incluso funzionalità nuove rispetto al sito originale, per essere sempr
 - Filippo Gurrata  
 - Michele Luca  
 - Gianluca Calvagna  
-
----
 
 **Ci auguriamo che ti piaccia e non vediamo l'ora di ricevere i tuoi feedback e contributi!**
 
