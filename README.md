@@ -78,11 +78,6 @@ Abbiamo incluso funzionalità nuove rispetto al sito originale, per essere sempr
 
 ---
 
-## **Autori e riconoscimenti**
-- Filippo Gurrata  
-- Michele Luca  
-- Gianluca Calvagna  
-
 **Ci auguriamo che ti piaccia e non vediamo l'ora di ricevere i tuoi feedback e contributi!**
 
 
